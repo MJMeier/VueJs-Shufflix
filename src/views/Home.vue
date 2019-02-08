@@ -4,6 +4,8 @@
     <router-link to="/signup">Signup</router-link>
     <router-link to="/login">Login</router-link>
     <router-link to="/logout">Logout</router-link>
+
+
   </div>
 </template>
 
@@ -16,11 +18,25 @@ var axios = require('axios');
 export default {
   data: function() {
     return {
-      message: 'Welcome to Vue.js!',
+      results: [],
     };
   },
+
   created: function() {},
-  methods: {},
-  computed: {},
+  methods: {
+    search: function() {
+      var params = {
+        text: this.text
+      };
+      axios
+        .get("/searches", params)
+        .then(function(response) {
+          this.results = response.data;
+        }.bind(this));
+    }
+  },
+  computed: {
+
+  },
 };
 </script>

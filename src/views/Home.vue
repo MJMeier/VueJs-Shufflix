@@ -4,21 +4,19 @@
     <router-link to="/signup">Signup</router-link>
     <router-link to="/login">Login</router-link>
     <router-link to="/logout">Logout</router-link>
-
-
   </div>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script>
-var axios = require('axios');
+var axios = require("axios");
 
 export default {
   data: function() {
     return {
-      results: [],
+      message: "Welcome to our app Shufflix!",
+      results: []
     };
   },
 
@@ -28,15 +26,13 @@ export default {
       var params = {
         text: this.text
       };
-      axios
-        .get("/searches", params)
-        .then(function(response) {
+      axios.get("/searches", params).then(
+        function(response) {
           this.results = response.data;
-        }.bind(this));
+        }.bind(this)
+      );
     }
   },
-  computed: {
-
-  },
+  computed: {}
 };
 </script>

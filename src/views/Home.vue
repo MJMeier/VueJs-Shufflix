@@ -4,6 +4,18 @@
     <router-link to="/signup">Signup</router-link>
     <router-link to="/login">Login</router-link>
     <router-link to="/logout">Logout</router-link>
+
+    <div>
+      <h2>Search for a show:</h2>
+      <p>Search: <input type="text" v-model="text" /></p>
+      <button v-on:click="search()">Search show</button>
+    </div>
+    <div>
+      <h2>Results:</h2>
+      <div v-for="result in results">
+        <p>Title: {{ result.title }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,7 +28,8 @@ export default {
   data: function() {
     return {
       message: "Welcome to our app Shufflix!",
-      results: []
+      results: [],
+      text: ""
     };
   },
 
@@ -26,11 +39,14 @@ export default {
       var params = {
         text: this.text
       };
-      axios.get("/searches", params).then(
+      axios.post("http://localhost:3000/api/searches", params).then(
         function(response) {
-          this.results = response.data;
+          // console.log(" response is: ", response);
+          this.results.push(response.data.results);
         }.bind(this)
       );
+      console.log("LOOK AT ME: ");
+      console.log(this);
     }
   },
   computed: {}

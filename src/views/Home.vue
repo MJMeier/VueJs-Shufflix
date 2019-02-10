@@ -12,8 +12,11 @@
     </div>
     <div>
       <h2>Results:</h2>
+      <!-- <p>{{ results }}</p> -->
       <div v-for="result in results">
-        <p>Title: {{ result.title }}</p>
+        <div v-for="thing in result">
+          <p>{{ thing.title }}</p>
+        </div>
       </div>
     </div>
   </div>

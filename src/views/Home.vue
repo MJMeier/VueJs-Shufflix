@@ -16,6 +16,9 @@
       <div v-for="result in results">
         <div v-for="thing in result">
           <p>{{ thing.title }}</p>
+          <button v-model="id" v-on:click="shuffleSeason(thing.id)">
+            Shuffle season
+          </button>
         </div>
       </div>
     </div>
@@ -43,7 +46,6 @@ export default {
       var params = {
         text: this.text
       };
-      // foreach;
       axios.post("http://localhost:3000/api/searches", params).then(
         function(response) {
           // vince is a bo$$ and came up with this simple AF solution
@@ -51,10 +53,14 @@ export default {
           this.results.push(response.data.results);
         }.bind(this)
       );
-      console.log("LOOK AT ME: ");
-      console.log(this);
-      console.log("LOOKEY DOOKEY:");
-      console.log(this.results);
+    },
+
+    shuffleSeason: function(thing) {
+      var params = {
+        id: thing
+      };
+      console.log("ID HERE: ");
+      console.log(params);
     }
   },
   computed: {}

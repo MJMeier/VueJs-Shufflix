@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <router-link to="/signup">Signup</router-link>
-    <router-link to="/login">Login</router-link>
-    <router-link to="/logout">Logout</router-link>
+    <router-link to="/signup">Signup </router-link>
+    <router-link to="/login">Login </router-link>
+    <router-link to="/logout">Logout </router-link>
 
     <div>
       <h2>Search for a show:</h2>
@@ -32,7 +32,8 @@ export default {
     return {
       message: "Welcome to our app Shufflix!",
       results: [],
-      text: ""
+      text: "",
+      id: ""
     };
   },
 
@@ -42,14 +43,18 @@ export default {
       var params = {
         text: this.text
       };
+      // foreach;
       axios.post("http://localhost:3000/api/searches", params).then(
         function(response) {
-          // console.log(" response is: ", response);
+          // vince is a bo$$ and came up with this simple AF solution
+          this.results = [];
           this.results.push(response.data.results);
         }.bind(this)
       );
       console.log("LOOK AT ME: ");
       console.log(this);
+      console.log("LOOKEY DOOKEY:");
+      console.log(this.results);
     }
   },
   computed: {}

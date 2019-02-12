@@ -19,6 +19,12 @@
           <button v-model="id" v-on:click="shuffleSeason(thing.id)">
             Shuffle season
           </button>
+          <h3>You should watch episode:</h3>
+          <div v-for="sode in episode">
+            <div v-for="inner in sode">
+              <p>{{ inner }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,7 +42,8 @@ export default {
       message: "Welcome to our app Shufflix!",
       results: [],
       text: "",
-      id: ""
+      id: "",
+      episode: []
     };
   },
 
@@ -50,17 +57,26 @@ export default {
         function(response) {
           // vince is a bo$$ and came up with this simple AF solution
           this.results = [];
+          this.episode = [];
           this.results.push(response.data.results);
         }.bind(this)
       );
     },
 
     shuffleSeason: function(thing) {
+      var episode = "";
       var params = {
         id: thing
       };
       console.log("ID HERE: ");
       console.log(params);
+      axios.post("http://localhost:3000/api/episodes", params).then(
+        function(response) {
+          this.episode = [];
+          this.episode.push(response.data);
+        }.bind(this),
+        console.log(this)
+      );
     }
   },
   computed: {}

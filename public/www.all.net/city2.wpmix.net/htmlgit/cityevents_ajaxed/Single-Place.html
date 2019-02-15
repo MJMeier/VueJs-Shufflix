@@ -1,0 +1,829 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 01:44:40 GMT -->
+<head>
+<meta charset="utf-8">
+<title>Welcome to Night City</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/main.css">
+<!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+<div class="b-preloader animated yt-loader">
+<div class="b-preloader__decor"></div>
+</div>
+<header class="b-header clearfix">
+<a href="index-2.html" class="logo"> <img src="img/logo_small.png" alt="Night City" title="Night City"> <span>Night City</span> </a>
+<a class="weather" href="#"> <img width="35" height="35" src="img/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+<div class="b-header__ctrl">
+<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
+<div class="b-header__ctrl__item">
+<a href="#" class="login ab-item jquery_popup"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span>
+</a>
+</div>
+<div class="b-header__ctrl__item">
+
+<form class="searchbox">
+<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();">
+<button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i>
+</button> <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span> </form>
+</div>
+</div>
+
+<div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+</div>
+<nav class="b-nav fadein">
+<ul>
+<li class="menu-item-has-children">
+<a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true"></i>Places </a>
+<ul>
+<li><a href="Places.html">Places</a>
+</li>
+<li><a href="Single-Place.html">Single place</a>
+</li>
+</ul>
+</li>
+<li class="menu-item-has-children"> <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
+<ul>
+<li><a href="Events.html">Events</a>
+</li>
+<li><a href="Single-Event.html">Single event</a>
+</li>
+</ul>
+</li>
+<li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
+<li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
+<li class="menu-item-has-children"> <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
+<ul>
+<li><a href="Single-Post_Standart.html">Single Page</a>
+</li>
+<li><a href="blog.html">Blog category</a>
+</li>
+<li><a href="#">Wide mansonry</a>
+</li>
+</ul>
+</li>
+<li class="menu-item-has-children"> <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Apps</a>
+<ul>
+<li><a href="Single-Post_Standart.html">iPhone</a>
+</li>
+<li><a href="#">Android</a>
+</li>
+</ul>
+</li>
+<li> <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a> </li>
+</ul>
+</nav>
+
+</header>
+
+<div class="b-main-container" id="content">
+<div class="hidden b-jquery-popup">
+<div class="b-form-reg-popup">
+<h2 class="b-form-reg-popup__title m--centered">Register Now</h2>
+<div class="b-form__row clearfix">
+<a href="#" class="b-form-reg-popup__facebook press--left"><img src="img/facebook-link.jpg" alt="facebook">
+</a>
+<a href="#" class="b-form-reg-popup__google press--right"><img src="img/google-link.jpg" alt="google">
+</a>
+</div>
+<div class="b-form__row">
+<input type="text" placeholder="Your Name">
+</div>
+<div class="b-form__row">
+<input type="text" placeholder="Email Address">
+</div>
+<div class="b-form__row">
+<input type="text" placeholder="Phone Number">
+</div>
+<div class="b-form__row">
+<select data-placeholder="Choose a Country..." class="chosen-select-2" tabindex="2">
+<option value=""></option>
+<option value="United States">United States</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Aland Islands">Aland Islands</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+</select>
+</div>
+<div class="b-form__row m--centered">
+<a href="#" class="btn">Register now</a>
+</div>
+</div>
+</div>
+<section class="b-pic b-pic--place lazy b-parallax" data-type="background" data-speed="8" data-src="img/place-bg.jpg">
+<div class="b-placeholder place-hold"></div>
+<div class="container b-pic-hgroup lazy-cont">
+<h1 class="b-pic__title">Ceviche Soho</h1>
+<h6 class="b-pic__sub-title">Restaurant Italian Food
+<span class="rating">
+<span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span>
+</span>
+</h6> </div>
+<div class="b-pic__links">
+ <a href="#" data-toggle="tooltip" data-placement="top" title="Music">
+<i class="fa fa-music" aria-hidden="true"></i>
+</a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Bar">
+<i class="fa fa-glass" aria-hidden="true"></i>
+</a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Photo">
+<i class="fa fa-camera" aria-hidden="true"></i>
+</a>
+</div>
+<div class="b-pic__check"> <i class="fmr fmr-icon-2100 b-pic__check__icon"></i>
+<div class="b-pic__check__title">Average check</div>
+<div class="b-pic__check__amount">100$ - 150$</div>
+</div>
+<a rel="prev" class="b-pic__arrow b-pic__arrow--left" href="Single-Place2.html"></a>
+<a rel="next" class="b-pic__arrow b-pic__arrow--right" href="Single-Place2.html"></a>
+</section>
+<div class="b-desc container">
+<div class="row">
+<div class="col-md-7">
+<h2 class="b-cont-title">Description</h2>
+<div class="b-desc__links">
+<div class="b-desc__links__item"><a href="#" class="ab-item"><i class="fa fa-star" aria-hidden="true"></i> <span>Write a review</span></a>
+</div>
+<div class="b-desc__links__item"><a href="#" class="ab-item"><i class="fa fa-heart" aria-hidden="true"></i> <span>Add to favorites</span></a>
+</div>
+<div class="b-desc__links__item"><a href="#" class="ab-item html_popup"><i class="fa fa-share-alt" aria-hidden="true"></i> <span>Share</span></a>
+</div>
+</div>
+<div class="b-desc__text">
+<p>Ut et hendrerit urna, sed tincidunt ante. Nam viverra, tellus eget suscipit dictum, elit posuere felis, ornare lobortis mauris nulla ut dolor. Pellentesque non enim eget sem placerat ornare accumsan ac massa. Donec tempus sagittis diam sit amet fringilla. Fusce condimentum egestas est, nec varius quam porta eu. Vivamus dictum id id finibus.</p>
+<p> Praesent leo lacus, cursus eu sem a, molestie suscipit mi. Ut felis sapien, sodales sit amet metus at, rutrum porttitor odio. Quisque volutpat venenatis lobortis. Duis iaculis rutrum enim, eget sagittis ante ornare sodales.</p>
+</div>
+</div>
+<div class="col-md-5">
+<div class="b-gmap">
+<div class="b-map">
+<div class="b-map__wrapper">
+<div id="map_place" class="b-gmap-canvas"></div>
+</div>
+<div class="b-map__footer"><i class="fa fa-map-marker" aria-hidden="true"></i> 75 Wall st, New York, NY 10005</div>
+</div>
+</div>
+<div class="b-contact-info clearfix">
+<div class="b-contact-info__item press--left"><i class="fa fa-paper-plane-o" aria-hidden="true"></i><a href="http://city2.wpmix.net/cdn-cgi/l/email-protection#8de4e3ebe2cde8f5ece0fde1e8a3eee2e0"><span class="__cf_email__" data-cfemail="ee87808881ae8b968f839e828bc08d8183">[email&#160;protected]</span></a>
+</div>
+<div class="b-contact-info__item press--right"><i class="fa fa-mobile" aria-hidden="true"></i><a href="tel:+445762809001">+44 57 6280 9001</a>
+</div>
+<div class="b-contact-info__item press--left"><i class="fa fa-clock-o" aria-hidden="true"></i><a href="#">Mon - Sat: 9:30 - 24:00</a>
+</div>
+<div class="b-contact-info__item press--right"><i class="fa fa-link" aria-hidden="true"></i><a href="#">link for your site.com</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="b-mini-promo b-mini-promo--3 b-parallax lazy" data-type="background" data-speed="8" data-src="img/src/banner-8.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-6">
+<p class="b-mini-promo__icon"><i class="fmr fmr-icon-384"></i>
+</p>
+<h4 class="b-mini-promo__title">Live music</h4>
+<p>Curabitur blandit efficitur magna eu cursus aliquam</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="b-mini-promo__icon"><i class="fmr fmr-icon-2511"></i>
+</p>
+<h4 class="b-mini-promo__title">Wi-Fi Zone</h4>
+<p>Sed eget facilisis eros, in vehicula dictum maximus</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="b-mini-promo__icon"><i class="fmr fmr-icon-3106"></i>
+</p>
+<h4 class="b-mini-promo__title">Food Delivery</h4>
+<p>Vestibulum euismod, vel posuere vulputate, velit mattis</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="b-mini-promo__icon"><i class="fmr fmr-icon-482"></i>
+</p>
+<h4 class="b-mini-promo__title">Beauty View</h4>
+<p>Aliquam diam justo, hendrerit in lacinia condimentum</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="b-menu">
+<div class="container">
+<h2 class="b-cont-title">Our menu</h2>
+<div class="b-slider owl-carousel-1">
+<div class="b-menu__set">
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img src="img/src/menu-1.jpg" alt="menu1"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Veal parmesan</a> <span class="press--right b-menu__set__item__price">$22</span> </div>
+<p class="b-menu__set__item__desc"> Provolone & Marinara Sauce with Spaghetti Marinara </p>
+</div>
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-2.jpg" alt="menu2"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Green goddess salad</a> <span class="press--right b-menu__set__item__price">$25</span> </div>
+<p class="b-menu__set__item__desc"> Provolone & Pomodoro with Hand-Cut Fettuccine </p>
+</div>
+</div>
+<div class="b-menu__set">
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-3.jpg" alt="menu3"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Chicken parmesan</a> <span class="press--right b-menu__set__item__price">$35</span> </div>
+<p class="b-menu__set__item__desc"> Capers, Spinach & Lemon Butter with Hand-Cut Fettuccine </p>
+</div>
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-4.jpg" alt="menu4"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Caesar salad</a> <span class="press--right b-menu__set__item__price">$20</span> </div>
+<p class="b-menu__set__item__desc"> Capers, Tomatoes, Fresh Sage, Lemon Butter with Spinach </p>
+</div>
+</div>
+<div class="b-menu__set">
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-5.jpg" alt="menu5"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Bruschetta</a> <span class="press--right b-menu__set__item__price">$10</span> </div>
+<p class="b-menu__set__item__desc"> Tomatoes, Garlic & Lemon Butter with Angel Hair Aglio Olio </p>
+</div>
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-6.jpg" alt="menu6"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Grilled salmon salad</a> <span class="press--right b-menu__set__item__price">$45</span> </div>
+<p class="b-menu__set__item__desc"> Mixed Greens, Grape Tomatoes, Red Onions, Linguine Crisps </p>
+</div>
+</div>
+<div class="b-menu__set">
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img src="img/src/menu-1.jpg" alt="menu1"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Veal parmesan</a> <span class="press--right b-menu__set__item__price">$22</span> </div>
+<p class="b-menu__set__item__desc"> Provolone & Marinara Sauce with Spaghetti Marinara </p>
+</div>
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-2.jpg" alt="menu2"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Green goddess salad</a> <span class="press--right b-menu__set__item__price">$25</span> </div>
+<p class="b-menu__set__item__desc"> Provolone & Pomodoro with Hand-Cut Fettuccine </p>
+</div>
+</div>
+<div class="b-menu__set">
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-3.jpg" alt="menu3"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Chicken parmesan</a> <span class="press--right b-menu__set__item__price">$35</span> </div>
+<p class="b-menu__set__item__desc"> Capers, Spinach & Lemon Butter with Hand-Cut Fettuccine </p>
+</div>
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-4.jpg" alt="menu4"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Caesar salad</a> <span class="press--right b-menu__set__item__price">$20</span> </div>
+<p class="b-menu__set__item__desc"> Capers, Tomatoes, Fresh Sage, Lemon Butter with Spinach </p>
+</div>
+</div>
+<div class="b-menu__set">
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-5.jpg" alt="menu5"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Bruschetta</a> <span class="press--right b-menu__set__item__price">$10</span> </div>
+<p class="b-menu__set__item__desc"> Tomatoes, Garlic & Lemon Butter with Angel Hair Aglio Olio </p>
+</div>
+<div class="b-menu__set__item clearfix">
+<div class="b-menu__set__item__img"> <img class="b-menu__set__item__img" src="img/src/menu-6.jpg" alt="menu6"> </div>
+<div class="b-menu__set__item__title"> <a class="b-menu__set__item__name" href="#">Grilled salmon salad</a> <span class="press--right b-menu__set__item__price">$45</span> </div>
+<p class="b-menu__set__item__desc"> Mixed Greens, Grape Tomatoes, Red Onions, Linguine Crisps </p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="b-ps b-photos">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-2 col-sm-6">
+<div class="b-photo"> <img class="image" src="img/src/photo-1.jpg" alt="sdf">
+<a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax"> <i class="fa fa-search" aria-hidden="true"></i> </a>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="b-photo"> <img class="image" src="img/src/photo-2.jpg" alt="sdf">
+<a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax"> <i class="fa fa-search" aria-hidden="true"></i> </a>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="b-photo"> <img class="image" src="img/src/photo-3.jpg" alt="sdf">
+<a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax"> <i class="fa fa-search" aria-hidden="true"></i> </a>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="b-photo"> <img class="image" src="img/src/photo-4.jpg" alt="sdf">
+<a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax"> <i class="fa fa-search" aria-hidden="true"></i> </a>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="b-photo"> <img class="image" src="img/src/photo-5.jpg" alt="sdf">
+<a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax"> <i class="fa fa-search" aria-hidden="true"></i> </a>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="b-photo"> <img class="image" src="img/src/photo-6.jpg" alt="sdf">
+<a href="img/src/photo-1.jpg" data-rel="lightcase:myCollection:slideshow" class="b-showcase noajax"> <i class="fa fa-search" aria-hidden="true"></i> </a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="b-reviews">
+<div class="container">
+<h2 class="b-cont-title">Reviews</h2>
+<div class="b-rev-rating">
+<div class="row">
+<div class="col-md-3">
+<div class="rating"> <span>★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span> </div> <span>(4.0)</span>
+<div class="b-based-title">based on 10 reviews</div>
+</div>
+<div class="col-md-3">
+<div> <span class="b-rev-rating__col1">Quality</span>
+<div class="rating"> <span>★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span> </div> <span>(4.0)</span> </div>
+<div> <span class="b-rev-rating__col1">Location</span>
+<div class="rating"> <span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span> </div> <span>(5.0)</span> </div>
+<div> <span class="b-rev-rating__col1">Service</span>
+<div class="rating"> <span>★</span><span>★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span> </div> <span>(3.0)</span> </div>
+</div>
+<div class="col-md-3">
+<div> <span class="b-rev-rating__col1">Prices</span>
+<div class="rating"> <span>★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span> </div> <span>(4.0)</span> </div>
+<div> <span class="b-rev-rating__col1">Ambiance</span>
+<div class="rating"> <span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span class="gold">★</span> </div> <span>(5.0)</span> </div>
+</div>
+<div class="col-md-3 m--righted sb-btn"> <a href="#" class="btn">Submit review</a> </div>
+</div>
+</div>
+
+<div class="b-comments">
+<ul class="b-comments__list">
+<li>
+<article class="b-comments__comment clearfix">
+<div class="b-comments__comment__img"> <img src="img/src/round-avatar-1.jpg" alt="ava1"> </div>
+<div class="b-comments__comment__cont">
+<header> <span class="b-comments__comment__name">Anna D.</span> </header>
+<p class="b-comments__comment__text">Vivamus sed mauris commodo, lobortis leo eget, porta elit. Integer viverra vehicula risus. Mauris rhoncus fermentum quam, quis hendrerit varius eget. Praesent ac quam leo. Ut in porttitor magna. Maecenas non finibus risus.</p>
+<footer>
+<div class="b-comments__comment__date">April 18, 2017</div> <a href="#" class="b-comments__comment__reply">Reply</a> </footer>
+</div>
+</article>
+<ul>
+<li>
+<article class="b-comments__comment clearfix">
+<div class="b-comments__comment__img"> <img src="img/src/round-avatar-2.jpg" alt="ava2"> </div>
+<div class="b-comments__comment__cont">
+<header> <span class="b-comments__comment__name">Admin</span> <span>(Reply to Anna D.)</span> </header>
+<p class="b-comments__comment__text">Curabitur sit amet porta diam. Ut blandit nunc ut sapien porttitor, et egestas lacus vulputate. Phasellus a leo tellus.</p>
+<footer>
+<div class="b-comments__comment__date">April 18, 2017</div> <a href="#" class="b-comments__comment__reply">Reply</a> </footer>
+</div>
+</article>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div class="b-pic-1 b-parallax lazy" data-type="background" data-speed="8" data-src="img/src/banner-5.jpg">
+
+</div>
+<div class="b-events container">
+<h2 class="b-cont-title">Upcoming events</h2>
+<div class="b-slider owl-carousel owl-carousel-1">
+<div class="b-events__item">
+<div class="b-event">
+<div class="b-event__img"> <img class="b-event__img__img" src="img/src/upcoming-event-1.jpg" alt="Upcoming event 1">
+<div class="b-sm-post__date">
+<div class="b-sm-post__month">apr</div>
+<div class="b-sm-post__day">29</div>
+</div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-event__links">
+<div class="press--left"> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$50 - $100</div>
+</div>
+</div>
+<div class="b-event__desc clearfix">
+<div class="press--left"> <a href="Single-Post_Standart.html" class="b-event__name">Lincoln square steak</a>
+<h5 class="b-event__cat">Restaurant</h5> </div> <a href="#" class="btn btn--sm press--right">Buy Ticket</a> </div>
+ </div>
+</div>
+<div class="b-events__item">
+<div class="b-event">
+<div class="b-event__img"> <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+<div class="b-sm-post__date">
+<div class="b-sm-post__month">apr</div>
+<div class="b-sm-post__day">29</div>
+</div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-event__links">
+<div class="press--left"> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$50 - $100</div>
+</div>
+</div>
+<div class="b-event__desc clearfix">
+<div class="press--left"> <a href="Single-Post_Standart.html" class="b-event__name">Lincoln square steak</a>
+<h5 class="b-event__cat">Restaurant</h5> </div> <a href="#" class="btn btn--sm press--right">Buy Ticket</a> </div>
+</div>
+</div>
+<div class="b-events__item">
+<div class="b-event">
+<div class="b-event__img"> <img class="b-event__img__img" src="img/src/upcoming-event-3.jpg" alt="Upcoming event 3">
+<div class="b-sm-post__date">
+<div class="b-sm-post__month">apr</div>
+<div class="b-sm-post__day">29</div>
+</div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-event__links">
+<div class="press--left"> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$50 - $100</div>
+</div>
+</div>
+<div class="b-event__desc clearfix">
+<div class="press--left"> <a href="Single-Post_Standart.html" class="b-event__name">Lincoln square steak</a>
+<h5 class="b-event__cat">Restaurant</h5> </div> <a href="#" class="btn btn--sm press--right">Buy Ticket</a> </div>
+</div>
+</div>
+<div class="b-events__item">
+<div class="b-event">
+<div class="b-event__img"> <img class="b-event__img__img" src="img/src/upcoming-event-1.jpg" alt="Upcoming event 1">
+<div class="b-sm-post__date">
+<div class="b-sm-post__month">apr</div>
+<div class="b-sm-post__day">29</div>
+</div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-event__links">
+<div class="press--left"> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$50 - $100</div>
+</div>
+</div>
+<div class="b-event__desc clearfix">
+<div class="press--left"> <a href="Single-Post_Standart.html" class="b-event__name">Lincoln square steak</a>
+<h5 class="b-event__cat">Restaurant</h5> </div> <a href="#" class="btn btn--sm press--right">Buy Ticket</a> </div>
+</div>
+</div>
+<div class="b-events__item">
+<div class="b-event">
+<div class="b-event__img"> <img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+<div class="b-sm-post__date">
+<div class="b-sm-post__month">apr</div>
+<div class="b-sm-post__day">29</div>
+</div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-event__links">
+<div class="press--left"> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$50 - $100</div>
+</div>
+</div>
+<div class="b-event__desc clearfix">
+<div class="press--left"> <a href="Single-Post_Standart.html" class="b-event__name">Lincoln square steak</a>
+<h5 class="b-event__cat">Restaurant</h5> </div> <a href="#" class="btn btn--sm press--right">Buy Ticket</a> </div>
+</div>
+</div>
+<div class="b-events__item">
+<div class="b-event">
+<div class="b-event__img"> <img class="b-event__img__img" src="img/src/upcoming-event-3.jpg" alt="Upcoming event 3">
+<div class="b-sm-post__date">
+<div class="b-sm-post__month">apr</div>
+<div class="b-sm-post__day">29</div>
+</div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-event__links">
+<div class="press--left"> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$50 - $100</div>
+</div>
+</div>
+<div class="b-event__desc clearfix">
+<div class="press--left"> <a href="Single-Post_Standart.html" class="b-event__name">Lincoln square steak</a>
+<h5 class="b-event__cat">Restaurant</h5> </div> <a href="#" class="btn btn--sm press--right">Buy Ticket</a> </div>
+</div>
+</div>
+</div>
+
+<div class="row m--centered">
+<div class="col-md-4 col-md-offset-4"><a href="#" class="btn">View all events</a>
+</div>
+</div>
+</div>
+
+<div class="b-links">
+<div class="container">
+<div class="row">
+<div class="col-md-12 m--centered">
+<h2 class="b-cont-title b-cont-title--white">Get a free drink</h2>
+<p>Pellentesque mollis luctus mi id laoreet. In at consectetur lorem. Sed bibendum ligula vel urna,
+<br> sed fermentum dolor efficitur.</p> <a class="b-social-link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a class="b-social-link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a class="b-social-link" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </div>
+</div>
+</div>
+</div>
+
+<div id="gmap_canvas"></div>
+<script data-cfasync="false" src="http://city2.wpmix.net/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+            main_js = function () {
+
+                'use strict';
+
+                $('.b-slider').addClass('visible');
+                
+
+
+                var mapOptions_place = {
+                    scrollwheel: true,
+                    zoom: 14,
+                    center: new google.maps.LatLng(43.118593, 131.88088400000004),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl: false,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                        position: google.maps.ControlPosition.BOTTOM_CENTER
+                    },
+                    panControl: false,
+                    panControlOptions: {
+                        position: google.maps.ControlPosition.TOP_RIGHT
+                    },
+                    zoomControl: false,
+                    zoomControlOptions: {
+                        style: google.maps.ZoomControlStyle.LARGE,
+                        position: google.maps.ControlPosition.TOP_RIGHT
+                    },
+                    scaleControl: false,
+                    scaleControlOptions: {
+                        position: google.maps.ControlPosition.TOP_LEFT
+                    },
+                    streetViewControl: false,
+                    streetViewControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_TOP
+                    },
+                    styles: [{
+                        "featureType": "poi",
+                        "stylers": [{"visibility": "off"}]
+                    }, {"stylers": [{"saturation": -70}, {"lightness": 37}, {"gamma": 1.15}]}, {
+                        "elementType": "labels",
+                        "stylers": [{"gamma": 0.26}, {"visibility": "off"}]
+                    }, {
+                        "featureType": "road",
+                        "stylers": [{"lightness": 0}, {"saturation": 0}, {"hue": "#ffffff"}, {"gamma": 0}]
+                    }, {
+                        "featureType": "road",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{"visibility": "off"}]
+                    }, {
+                        "featureType": "road.arterial",
+                        "elementType": "mycity",
+                        "stylers": [{"lightness": 20}]
+                    }, {
+                        "featureType": "road.highway",
+                        "elementType": "mycity",
+                        "stylers": [{"lightness": 50}, {"saturation": 0}, {"hue": "#ffffff"}]
+                    }, {
+                        "featureType": "administrative.province",
+                        "stylers": [{"visibility": "on"}, {"lightness": -50}]
+                    }, {
+                        "featureType": "administrative.province",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{"visibility": "off"}]
+                    }, {
+                        "featureType": "administrative.province",
+                        "elementType": "labels.text",
+                        "stylers": [{"lightness": 20}]
+                    }]
+                    , styles: MyCity_map_init_obj.global_map_styles
+                };
+                //map
+                var map_place = new google.maps.Map(document.getElementById("map_place"), mapOptions_place);
+                //positions
+                var point_place = new google.maps.LatLng(43.118593, 131.88088400000004);
+                //markers
+                // var marker_place = className = 'Cafe';
+                var marker_place = new google.maps.Marker({
+                    position: point_place,
+                    map: map_place,
+                    category: '',
+                    icon: 'img/map/marker-1.png',
+                    title: "point_place"
+                });
+
+
+                //****************************** owlCarousel plugin activate ******************************//
+                $(".owl-carousel-1").owlCarousel({
+                    loop: true
+                    , margin: 30
+                    , responsiveClass: true
+                    , responsive: {
+                        0: {
+                            items: 1
+                            , nav: true
+                        }
+                        , 600: {
+                            items: 2
+                            , nav: true
+                        }
+                        , 1000: {
+                            items: 3
+                            , nav: true
+                            , loop: false
+                        }
+                    }
+                });
+                //****************************** Lightcase plugin activate ******************************//
+                $('a[data-rel^=lightcase]').lightcase();
+                $('a[data-rel="lightcase:myCollection:slideshow"]').lightcase({
+                    showSequenceInfo: false
+                    , transition: 'scrollHorizontal'
+                });
+                $('a[data-rel="lightcase:myCollection"]').lightcase({
+                    showSequenceInfo: false
+                });
+                $('#example1').lightcase({
+                    transition: 'none'
+                });
+
+                jQuery(document).on('click', '.google_view', function(){
+                    jQuery('.google_view iframe').css("pointer-events", "auto");
+                });
+
+                $(window).scroll(function(){
+                    $('.google_view iframe').css("pointer-events", "none");
+                });
+
+                jQuery(document).on('click', '.b-map__wrapper', function(){
+                    $('#map_place').css("pointer-events", "auto");
+                });
+                
+                $(window).scroll(function(){
+                    $('#map_place').css("pointer-events", "none");
+                });
+                
+                tooltip();
+
+                $(document).on( "click", ".jquery_popup", function() {
+                    setTimeout(function(){
+                        $(".popup .chosen-select-2").chosen({
+                            disable_search_threshold: 10,
+                            no_results_text: "Oops, nothing found!",
+                            width: "100%"
+                        });
+                    }, 50);
+                });
+
+                setTimeout(function(){
+                    var header = $('.place-hold');
+                    var range = 400;
+
+                    $(window).on('scroll', function () {
+                        $('.place-hold').css("transition","none");
+                        var scrollTop = $(this).scrollTop();
+                        var offset = header.offset().top;
+                        var height = header.outerHeight();
+                        offset = offset + height / 1.5;
+                        var calc =  (scrollTop - offset + range) / range;
+                        
+                        header.css({ 'opacity': calc });
+                        
+                        if ( calc > '1' ) {
+                            header.css({ 'opacity': 1 });
+                        } else if ( calc < '0' ) {
+                            header.css({ 'opacity': 0 });
+                        }
+
+                    });
+                },1000);
+            }
+        </script>
+</div>
+
+<div class="b-footer">
+<div class="b-footer__info">
+<div class="container clearfix">
+<div class="row">
+<div class="b-footer__text col-md-3 col-sm-12"> <a href="index-2.html" class="b-footer__logo">Night City</a>
+<p>Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<div class="b-footer__copyright">© 2017 All Rights Reserved</div>
+</div>
+<div class="b-footer__nav__col col-md-2 col-md-offset-1 col-sm-3 col-xs-4">
+<div class="b-footer__nav__col__title">About us</div>
+<ul>
+<li><a href="Single-Post_Standart.html">Our history</a>
+</li>
+<li><a href="Single-Post_Standart.html">Contact us</a>
+</li>
+<li><a href="Single-Post_Standart.html">Privacy Policy</a>
+</li>
+<li><a href="Single-Post_Standart.html">Terms of Use</a>
+</li>
+</ul>
+</div>
+<div class="b-footer__nav__col col-md-3 col-sm-5 col-xs-8">
+<div class="b-footer__nav__col__title">Categories</div>
+<ul>
+<li><a href="blog.html">Bars</a>
+</li>
+<li><a href="blog.html">Food</a>
+</li>
+<li><a href="blog.html">Restaurants</a>
+</li>
+<li><a href="blog.html">Night life</a>
+</li>
+</ul>
+<ul>
+<li><a href="blog.html">Activities</a>
+</li>
+<li><a href="blog.html">Cinema</a>
+</li>
+<li><a href="blog.html">Hotels</a>
+</li>
+<li><a href="blog.html">Shopping</a>
+</li>
+</ul>
+</div>
+<div class="b-footer__nav__col col-md-2 col-sm-4 col-xs-12">
+<div class="b-footer__nav__col__title">menu</div>
+<ul>
+<li><a href="index-2.html">Home</a>
+</li>
+<li><a href="Places.html">Places</a>
+</li>
+<li><a href="Events.html">Events</a>
+</li>
+<li><a href="Gallery.html">Gallery</a>
+</li>
+</ul>
+<ul>
+<li><a href="blog.html">Blog</a>
+</li>
+<li><a href="Single-Post_Standart.html">Help</a>
+</li>
+<li><a href="Single-Post_Standart.html">Account</a>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div class="shared">
+<div class="container clearfix">
+<div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </div>
+
+<div class="stores">
+<a href="#" class="stores-black-gp"><img src="img/icon-googleplay.png" alt="">
+</a>
+<a href="#" class="stores-black-apps"><img src="img/apple-ic.png" alt="">
+</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.popup.min.js"></script>
+<script src="js/jssor.slider.mini.js"></script>
+<script src="js/lightcase.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/compiled_lib.js"></script>
+<script src="js/custum.js"></script>
+<script src="js/jquery.custom-scrollbar.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+<!-- Mirrored from city2.wpmix.net/htmlgit/cityevents_ajaxed/Single-Place.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 01:45:21 GMT -->
+</html>

@@ -1,0 +1,8 @@
+http://city2.wpmix.net/htmlgit/cityevents_ajaxed/ -O /tmp/www.all.net +*.http://city2.wpmix.net/htmlgit/cityevents_ajaxed//* -v
+File generated automatically on Mon, 11 Feb 2019 19:39:02, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

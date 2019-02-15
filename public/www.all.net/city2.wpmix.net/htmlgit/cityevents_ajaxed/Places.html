@@ -1,0 +1,645 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from city2.wpmix.net/htmlgit/cityevents_ajaxed/Places.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 01:44:10 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Welcome to Night City</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/main.css">
+<!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+<div class="b-preloader animated yt-loader">
+<div class="b-preloader__decor"></div>
+</div>
+<header class="b-header clearfix">
+<a href="index-2.html" class="logo"> <img src="img/logo_small.png" alt="Night City" title="Night City"> <span>Night City</span> </a>
+<a class="weather" href="#"> <img width="35" height="35" src="img/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+<div class="b-header__ctrl">
+<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
+<div class="b-header__ctrl__item">
+<a href="#" class="ab-item login jquery_popup"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span>
+</a>
+</div>
+<div class="b-header__ctrl__item">
+
+<form class="searchbox">
+<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();">
+<button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i>
+</button> <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span> </form>
+</div>
+</div>
+
+<div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+</div>
+<nav class="b-nav fadein">
+<ul>
+<li class="menu-item-has-children">
+<a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true"></i>Places </a>
+<ul>
+<li><a href="Places.html">Places</a>
+</li>
+<li><a href="Single-Place.html">Single place</a>
+</li>
+</ul>
+</li>
+<li class="menu-item-has-children"> <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
+<ul>
+<li><a href="Events.html">Events</a>
+</li>
+<li><a href="Single-Event.html">Single event</a>
+</li>
+</ul>
+</li>
+<li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
+<li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
+<li class="menu-item-has-children"> <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
+<ul>
+<li><a href="Single-Post_Standart.html">Single Page</a>
+</li>
+<li><a href="blog.html">Blog category</a>
+</li>
+<li><a href="#">Wide mansonry</a>
+</li>
+</ul>
+</li>
+<li class="menu-item-has-children"> <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Apps</a>
+<ul>
+<li><a href="Single-Post_Standart.html">iPhone</a>
+</li>
+<li><a href="#">Android</a>
+</li>
+</ul>
+</li>
+<li> <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a> </li>
+</ul>
+</nav>
+
+</header>
+
+<div class="b-main-container places-page" id="content">
+<div id="hellopreloader">
+<div id="hellopreloader_preload"></div>
+</div>
+<div class="hidden b-jquery-popup">
+<div class="b-form-reg-popup">
+<h2 class="b-form-reg-popup__title m--centered">Register Now</h2>
+<div class="b-form__row clearfix">
+<a href="#" class="b-form-reg-popup__facebook press--left"><img src="img/facebook-link.jpg" alt="facebook">
+</a>
+<a href="#" class="b-form-reg-popup__google press--right"><img src="img/google-link.jpg" alt="google">
+</a>
+</div>
+<div class="b-form__row">
+<input type="text" placeholder="Your Name">
+</div>
+<div class="b-form__row">
+<input type="text" placeholder="Email Address">
+</div>
+<div class="b-form__row">
+<input type="text" placeholder="Phone Number">
+</div>
+<div class="b-form__row">
+<select data-placeholder="Choose a Country..." class="chosen-select-2" tabindex="2">
+<option value=""></option>
+<option value="United States">United States</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Aland Islands">Aland Islands</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+</select>
+</div>
+<div class="b-form__row m--centered">
+<a href="#" class="btn">Register now</a>
+</div>
+</div>
+</div>
+<div class="b-map-menu">
+<ul class="b-map-menu__list">
+<li class="b-map-menu__list__bars active"><a href="#" class="noajax"><i class="fmr fmr-icon-2810"></i>bars</a>
+</li>
+<li class="b-map-menu__list__food"><a href="#" class="noajax"><i class="fmr fmr-icon-467"></i>Food</a>
+</li>
+<li class="b-map-menu__list__restaurants"><a href="#" class="noajax"><i class="fmr fmr-icon-466"></i>Restaurants</a>
+</li>
+<li class="b-map-menu__list__night-life"><a href="#" class="noajax"><i class="fmr fmr-icon-1100"></i>Night Life</a>
+</li>
+<li class="b-map-menu__list__entertainment"><a href="#" class="noajax"><i class="fmr fmr-icon-4514"></i>Entertainment</a>
+</li>
+<li class="b-map-menu__list__cinema"><a href="#" class="noajax"><i class="fmr fmr-icon-1618"></i>Cinema</a>
+</li>
+<li class="b-map-menu__list__hotels"><a href="#" class="noajax"><i class="fmr fmr-icon-53"></i>Hotels</a>
+</li>
+<li class="b-map-menu__list__shopping"><a href="#" class="noajax"><i class="fmr fmr-icon-454"></i>Shopping</a>
+</li>
+<li class="b-map-menu__list__all-places"><a href="#" class="noajax">all <br>places</a>
+</li>
+</ul>
+</div>
+
+<div class="b-slide-menu opened">
+<div class="b-slide-menu__toggle"><i class="fa fa-caret-left" aria-hidden="true"></i><i class="fa fa-caret-right hidden" aria-hidden="true"></i>
+</div>
+<div class="b-slide-menu__content custom-scroll default-skin">
+<h2 class="b-slide-menu__title">Restaurants</h2>
+<div class="b-slide-menu__form container-fluid opened">
+<div class="b-slide-menu__form__row row">
+<div class="col-md-3"><span class="b-slide-menu__form__row__title">Types:</span>
+</div>
+<div class="col-md-9">
+<div class="b-slide-menu__form__row__item">
+<select data-placeholder="Choose a Country..." class="chosen-select" tabindex="2">
+<option value=""></option>
+<option value="United States">United States</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Aland Islands">Aland Islands</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+</select>
+</div>
+</div>
+</div>
+<div class="b-slide-menu__form__row row">
+<div class="col-md-3"><span class="b-slide-menu__form__row__title">Price range:</span>
+</div>
+<div class="col-md-9">
+<div class="b-slide-menu__form__row__item">
+<input type="text" class="example_class" name="example_name" value="" /> </div>
+</div>
+</div>
+<div class="b-slide-menu__form__row row">
+<div class="col-md-3"><span class="b-slide-menu__form__row__title">Location:</span>
+</div>
+<div class="col-md-6">
+<div class="b-slide-menu__form__row__item">
+<input type="text" placeholder="Enter location"> </div>
+</div>
+<div class="col-md-3">
+<div class="b-checkbox">
+<input id="box1" type="checkbox">
+<label for="box1">Near me</label>
+</div>
+</div>
+</div>
+<div class="b-slide-menu__form__row row">
+<div class="col-md-3"><span class="b-slide-menu__form__row__title">Keywords:</span>
+</div>
+<div class="col-md-9">
+<div class="b-slide-menu__form__row__item">
+<input type="text" placeholder="Start typing">
+<button type="submit" title="Search" class="b-gadget__search__button"><i class="fa fa-search" aria-hidden="true"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="b-slide-menu__row clearfix">
+<div class="btn btn--white press--left b-hide-filters">Hide filters</div>
+<div class="b-slide-menu__pages-num press--right">1-10 of 24</div>
+</div>
+<div class="b-place-list b-place-list--grid clearfix">
+<div class="b-grid-sizer"></div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/rest.jpg" alt="">
+</a>
+<a href="#" class="b-icon-medal"></a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak Lorem ipsum dolor.</a>
+<h5 class="b-pop-place__cat">Restaurant</h5>
+</div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/s-bar.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="t2rue"></i></a>
+<a href="#" class="b-icon-fire"></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/bar.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<a href="#" class="b-icon-coins"></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/cinema.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/place-category-6.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/latest-photo-1.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/place-category-7.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/place-category-8.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/pop-place-1.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+<div class="b-grid-item b-grid-item--masonryPl">
+<div class="b-pop-place">
+<div class="b-pop-place__img">
+<a class="b-pop-place__img__img" href="Single-Place.html"><img src="img/src/pop-place-2.jpg" alt="">
+</a> <a href="#" class="b-icon-like" title="Like"><i class="fa fa-heart" aria-hidden="true"></i></a>
+<div class="b-pop-place__links">
+<div class="press--left"> <a href="#" class="b-pop-place__links__item"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"><i class="fa fa-camera" aria-hidden="true"></i></a> </div>
+<div class="press--right">$100 - $150</div>
+</div>
+</div>
+<div class="b-pop-place__desc clearfix">
+<div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln square steak</a>
+<h5 class="b-pop-place__cat">Restaurant</h5> </div>
+</div>
+</div>
+</div>
+
+<ul class="b-place-list__pager">
+<li class="prev"><a href="#"><i class="fa fa-caret-left" aria-hidden="true"></i></a>
+</li>
+<li class="active"><a href="#">1</a>
+</li>
+<li><a href="#">2</a>
+</li>
+<li><a href="#">3</a>
+</li>
+<li class="next"><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div class="b-map">
+<div class="b-map__wrapper">
+<div id='gmap_canvas' class="b-gmap-canvas"></div>
+</div>
+</div>
+
+<ul class="b-place-list__pager">
+<li class="prev"><a href="#"><i class="fa fa-caret-left" aria-hidden="true"></i></a>
+</li>
+<li class="active"><a href="#">1</a>
+</li>
+<li><a href="#">2</a>
+</li>
+<li><a href="#">3</a>
+</li>
+<li class="next"><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+</li>
+</ul>
+<script>
+
+            main_js = function () {
+
+                    'use strict';
+
+                    initialize_map();
+
+                    setTimeout(function(){
+                        $('.b-place-list').addClass('visible');
+                    },500);
+
+                    //b-hide-filters
+
+                    jQuery(document).on('click', '.b-hide-filters' , function(){
+                        var filterBtn = jQuery('.b-hide-filters');
+                        var menuForm = jQuery('.b-slide-menu__form');
+                        if (menuForm.hasClass('opened')) {
+                            menuForm.removeClass('opened').addClass('closed');
+                            filterBtn.text('Show filters');
+                        } else if (menuForm.hasClass('closed')) {
+                            menuForm.removeClass('closed').addClass('opened');
+                            filterBtn.text('Hide filters');
+                        }
+                        jQuery('.b-slide-menu__form').slideToggle('medium');
+                    });
+
+                    //chosen-select init
+
+                    $(".chosen-select").chosen({
+                      disable_search_threshold: 10,
+                      no_results_text: "Oops, nothing found!",
+                      width: "100%"
+                    });
+
+                    //****************************** Ion range slider plugin activate ******************************//
+
+                    $('.example_class').ionRangeSlider({
+                        type: 'double',
+                        min: 0,
+                        max: 750,
+                        from: 150,
+                        to: 590
+                    });
+
+                    // init Masonry
+                    var $grid = $('.b-place-list').masonry({
+                      itemSelector: '.b-grid-item',
+                      percentPosition: true,
+                      gutter: 20
+                    });
+                    // layout Isotope after each image loads
+                    $grid.imagesLoaded().progress( function() {
+                      $grid.masonry();
+                      $(window).resize();
+                    });  
+                    //custom-scroll init
+
+                    $('.custom-scroll').customScrollbar({
+                        updateOnWindowResize: true
+                    });
+
+                    //tooltip init
+
+                    // tooltip();
+
+                    $(document).on( "click", ".jquery_popup", function() {
+                        setTimeout(function(){
+                            $(".popup .chosen-select-2").chosen({
+                                disable_search_threshold: 10,
+                                no_results_text: "Oops, nothing found!",
+                                width: "100%"
+                            });
+                        }, 50);
+                    });
+
+                    //****************************** Slide menu on map pages ******************************//
+                    jQuery(document).on('click', '.b-slide-menu__toggle' , function(){
+                        var slideMenu = jQuery('.b-slide-menu');
+                        if (slideMenu.hasClass('opened')) {
+                            slideMenu.removeClass('opened').addClass('closed');
+                            jQuery(this).find(jQuery('.fa-caret-right')).removeClass('hidden');
+                            jQuery(this).find(jQuery('.fa-caret-left')).addClass('hidden');
+                            slideMenu.removeClass('oopeen').addClass('closseed');
+                        } else if (slideMenu.hasClass('closed')) {
+                            slideMenu.removeClass('closed').addClass('opened');
+                            jQuery(this).find(jQuery('.fa-caret-left')).removeClass('hidden');
+                            jQuery(this).find(jQuery('.fa-caret-right')).addClass('hidden');
+                            slideMenu.removeClass('closseed').addClass('oopeen');
+                        }
+                    });
+
+                    var hellopreloader = document.getElementById("hellopreloader_preload");
+                    function fadeOutnojquery(el){
+                        el.style.opacity = 1;
+                        var interhellopreloader = setInterval(function(){
+                            el.style.opacity = el.style.opacity - 0.05;
+                            if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);
+                                hellopreloader.style.display = "none";}},16);}
+                    setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);
+
+                }
+        </script>
+</div>
+
+<div class="b-footer">
+<div class="b-footer__info">
+<div class="container clearfix">
+<div class="row">
+<div class="b-footer__text col-md-3 col-sm-12"> <a href="index-2.html" class="b-footer__logo">Night City</a>
+<p>Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<div class="b-footer__copyright">© 2017 All Rights Reserved</div>
+</div>
+<div class="b-footer__nav__col col-md-2 col-md-offset-1 col-sm-3 col-xs-4">
+<div class="b-footer__nav__col__title">About us</div>
+<ul>
+<li><a href="Single-Post_Standart.html">Our history</a>
+</li>
+<li><a href="Single-Post_Standart.html">Contact us</a>
+</li>
+<li><a href="Single-Post_Standart.html">Privacy Policy</a>
+</li>
+<li><a href="Single-Post_Standart.html">Terms of Use</a>
+</li>
+</ul>
+</div>
+<div class="b-footer__nav__col col-md-3 col-sm-5 col-xs-8">
+<div class="b-footer__nav__col__title">Categories</div>
+<ul>
+<li><a href="blog.html">Bars</a>
+</li>
+<li><a href="blog.html">Food</a>
+</li>
+<li><a href="blog.html">Restaurants</a>
+</li>
+<li><a href="blog.html">Night life</a>
+</li>
+</ul>
+<ul>
+ <li><a href="blog.html">Activities</a>
+</li>
+<li><a href="blog.html">Cinema</a>
+</li>
+<li><a href="blog.html">Hotels</a>
+</li>
+<li><a href="blog.html">Shopping</a>
+</li>
+</ul>
+</div>
+<div class="b-footer__nav__col col-md-2 col-sm-4 col-xs-12">
+<div class="b-footer__nav__col__title">menu</div>
+<ul>
+<li><a href="index-2.html">Home</a>
+</li>
+<li><a href="Places.html">Places</a>
+</li>
+<li><a href="Events.html">Events</a>
+</li>
+<li><a href="Gallery.html">Gallery</a>
+</li>
+</ul>
+<ul>
+<li><a href="blog.html">Blog</a>
+</li>
+<li><a href="Single-Post_Standart.html">Help</a>
+</li>
+<li><a href="Single-Post_Standart.html">Account</a>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div class="shared">
+<div class="container clearfix">
+<div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </div>
+
+<div class="stores">
+<a href="#" class="stores-black-gp"><img src="img/icon-googleplay.png" alt="">
+</a>
+<a href="#" class="stores-black-apps"><img src="img/apple-ic.png" alt="">
+</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.popup.min.js"></script>
+<script src="js/jssor.slider.mini.js"></script>
+<script src="js/lightcase.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/compiled_lib.js"></script>
+<script src="js/custum.js"></script>
+<script src="js/jquery.custom-scrollbar.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+<!-- Mirrored from city2.wpmix.net/htmlgit/cityevents_ajaxed/Places.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 01:44:40 GMT -->
+</html>

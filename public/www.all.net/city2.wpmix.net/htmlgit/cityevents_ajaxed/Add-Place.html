@@ -1,0 +1,450 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from city2.wpmix.net/htmlgit/cityevents_ajaxed/Add-Place.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 01:43:43 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Welcome to Night City</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/main.css">
+<!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+<div class="b-preloader animated yt-loader">
+<div class="b-preloader__decor"></div>
+</div>
+<header class="b-header clearfix">
+<a href="index-2.html" class="logo"> <img src="img/logo_small.png" alt="Night City" title="Night City"> <span>Night City</span> </a>
+<a class="weather" href="#"> <img width="35" height="35" src="img/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+<div class="b-header__ctrl">
+<div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
+<div class="b-header__ctrl__item">
+<a href="#" class="login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span>
+</a>
+</div>
+<div class="b-header__ctrl__item">
+
+<form class="searchbox">
+<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();">
+<button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i>
+</button> <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span> </form>
+</div>
+</div>
+
+<div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+</div>
+<nav class="b-nav fadein">
+<ul>
+<li class="menu-item-has-children">
+<a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true"></i>Places </a>
+<ul>
+<li><a href="Places.html">Places</a>
+</li>
+<li><a href="Single-Place.html">Single place</a>
+</li>
+</ul>
+</li>
+<li class="menu-item-has-children"> <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
+<ul>
+<li><a href="Events.html">Events</a>
+</li>
+<li><a href="Single-Event.html">Single event</a>
+</li>
+</ul>
+</li>
+<li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
+<li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
+<li class="menu-item-has-children"> <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
+<ul>
+<li><a href="Single-Post_Standart.html">Single Page</a>
+</li>
+<li><a href="blog.html">Blog category</a>
+</li>
+<li><a href="#">Wide mansonry</a>
+</li>
+</ul>
+ </li>
+<li class="menu-item-has-children"> <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Apps</a>
+<ul>
+<li><a href="Single-Post_Standart.html">iPhone</a>
+</li>
+<li><a href="#">Android</a>
+</li>
+</ul>
+</li>
+<li> <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a> </li>
+</ul>
+</nav>
+
+</header>
+
+<div class="b-main-container" id="content">
+<div class="b-pic b-pic--submit-place b-parallax lazy" data-type="background" data-speed="8" data-src="img/src/banner-9.jpg">
+<div class="b-placeholder"></div>
+<div class="container lazy-cont">
+<h1 class="b-pic__title">Submit your place</h1>
+<h6 class="b-pic__sub-title">Home / Submit your place</h6> </div>
+</div>
+<div class="b-form-place container">
+<div class="row">
+<div class="col-md-4">
+<aside class="b-sidebar">
+<div class="b-gadget">
+<div class="b-steps-list">
+<div class="b-steps-list__item clearfix active">
+<div class="b-steps-list__icon"><i class="fa fa-user" aria-hidden="true"></i>
+</div> <a href="#" class="b-steps-list__title">Your place profile</a> </div>
+<div class="b-steps-list__item clearfix">
+<div class="b-steps-list__icon"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+</div> <a href="#" class="b-steps-list__title">Contact information</a> </div>
+<div class="b-steps-list__item clearfix">
+<div class="b-steps-list__icon"><i class="fa fa-pencil" aria-hidden="true"></i>
+</div> <a href="#" class="b-steps-list__title">Description</a> </div>
+<div class="b-steps-list__item clearfix">
+<div class="b-steps-list__icon"><i class="fa fa-share-alt" aria-hidden="true"></i>
+</div> <a href="#" class="b-steps-list__title">Social networks</a> </div>
+<div class="b-steps-list__item clearfix">
+<div class="b-steps-list__icon"><i class="fa fa-star" aria-hidden="true"></i>
+</div> <a href="#" class="b-steps-list__title">Special offers</a> </div>
+</div>
+</div>
+</aside>
+</div>
+<div class="col-md-8">
+<div class="b-form-cont">
+<h2 class="b-form-cont__title">Your place profile</h2>
+<div class="b-form b-form--place container-fluid">
+<div class="b-form__row row">
+<div class="col-md-12">
+<input type="text" placeholder="Enter Place Title"> </div>
+</div>
+<div class="b-form__row row">
+<div class="col-md-12">
+<form action="http://city2.wpmix.net/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+</div>
+</div>
+<div class="b-form__row row">
+<div class="col-md-12">
+<select data-placeholder="Choose a Country..." class="chosen-select" tabindex="2">
+<option value=""></option>
+<option value="United States">United States</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Aland Islands">Aland Islands</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+</select>
+</div>
+</div>
+<div class="b-form__row row">
+<div class="col-md-12">
+<input type="text" placeholder="Enter Tags here"> </div>
+</div>
+<div class="b-form__row row">
+<div class="col-md-12"> <a href="#" class="btn">Save</a> </div>
+</div>
+</div>
+</div>
+
+<div class="b-form-cont">
+<h2 class="b-form-cont__title">Contact information</h2>
+<div class="b-form b-form--place container-fluid">
+<div class="b-form__row">
+<input type="text" placeholder="Coordinates"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Formatted Address"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Phone"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Website"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Email"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Google Inside View or Business View Code"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Google Street View Code"> </div>
+<div class="b-form__row"> <a href="#" class="btn">Save</a> </div>
+</div>
+</div>
+
+<div class="b-form-cont">
+<h2 class="b-form-cont__title">Description</h2>
+<div class="b-form b-form--place container-fluid">
+<div class="b-form__row">
+<textarea name="area1" id="area1" cols="30" rows="10">Short Description</textarea>
+</div>
+<div class="b-form__row">
+<textarea name="area2" id="area2" cols="30" rows="30">Full Description</textarea>
+</div>
+<div class="b-form__row row">
+<div class="col-md-4">
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Wi-fi Zone</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Kids Friendly</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Accepts Card</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Parking</label>
+</div>
+</div>
+<div class="col-md-4">
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Reservations</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Bike Parking</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Accessible</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Smoking allowed</label>
+</div>
+</div>
+<div class="col-md-4">
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Live music</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Food delivery</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Beauty view</label>
+</div>
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Special place</label>
+</div>
+</div>
+</div>
+<div class="b-form__row">
+<input type="text" placeholder="Video Code"> </div>
+<div class="b-form__row row">
+<div class="col-md-4">
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> I have Menu</label>
+</div>
+</div>
+<div class="col-md-4">
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> I have Schedule</label>
+</div>
+</div>
+</div>
+<div class="b-form__row"> <a href="#" class="btn">Save</a> </div>
+</div>
+</div>
+
+<div class="b-form-cont">
+<h2 class="b-form-cont__title">Social networks</h2>
+<div class="b-form b-form--place container-fluid">
+<div class="b-form__row">
+<input type="text" placeholder="Facebook username"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Twitter username"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Google+ account ID"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="LinkedIn public profile URL"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="YouTube channel username"> </div>
+<div class="b-form__row">
+<input type="text" placeholder="Instagram account ID"> </div>
+<div class="b-form__row"> <a href="#" class="btn">Save</a> </div>
+</div>
+</div>
+
+<div class="b-form-cont">
+<h2 class="b-form-cont__title">Special offers</h2>
+<div class="b-form b-form--place container-fluid">
+<div class="b-form__row">
+<input type="text" placeholder="Enter title"> </div>
+<div class="b-form__row">
+<textarea name="#" id="#" cols="30" rows="10">Description</textarea>
+</div>
+<div class="b-form__row">
+<input type="text" placeholder="Coupon code"> </div>
+<div class="b-form__row">
+<div class="b-checkbox">
+<label>
+<input type="checkbox"> Users will post to social networks</label>
+</div>
+</div>
+<div class="b-form__row">
+<div class="b-form__notice"> You can buy premium listing for this place on <a href="#">Finance page</a> </div>
+</div>
+<div class="b-form__row"> <a href="#" class="btn">Save</a> </div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div id="gmap_canvas"></div>
+<script>
+            main_js = function () {
+
+                $(".chosen-select").chosen({
+                  disable_search_threshold: 10,
+                  no_results_text: "Oops, nothing found!",
+                  width: "100%"
+                });
+
+                // var Dropzone = require("dropzone");
+                var myDropzone = new Dropzone(".dropzone", { url: "/file/post"});
+
+            }
+        </script>
+</div>
+
+<div class="b-footer">
+<div class="b-footer__info">
+<div class="container clearfix">
+<div class="row">
+<div class="b-footer__text col-md-3 col-sm-12"> <a href="index-2.html" class="b-footer__logo">Night City</a>
+<p>Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<div class="b-footer__copyright">© 2017 All Rights Reserved</div>
+</div>
+<div class="b-footer__nav__col col-md-2 col-md-offset-1 col-sm-3 col-xs-4">
+<div class="b-footer__nav__col__title">About us</div>
+<ul>
+<li><a href="Single-Post_Standart.html">Our history</a>
+</li>
+<li><a href="Single-Post_Standart.html">Contact us</a>
+</li>
+<li><a href="Single-Post_Standart.html">Privacy Policy</a>
+</li>
+<li><a href="Single-Post_Standart.html">Terms of Use</a>
+</li>
+</ul>
+</div>
+<div class="b-footer__nav__col col-md-3 col-sm-5 col-xs-8">
+<div class="b-footer__nav__col__title">Categories</div>
+<ul>
+<li><a href="blog.html">Bars</a>
+</li>
+<li><a href="blog.html">Food</a>
+</li>
+<li><a href="blog.html">Restaurants</a>
+</li>
+<li><a href="blog.html">Night life</a>
+</li>
+</ul>
+<ul>
+<li><a href="blog.html">Activities</a>
+</li>
+<li><a href="blog.html">Cinema</a>
+</li>
+<li><a href="blog.html">Hotels</a>
+</li>
+<li><a href="blog.html">Shopping</a>
+</li>
+</ul>
+</div>
+<div class="b-footer__nav__col col-md-2 col-sm-4 col-xs-12">
+<div class="b-footer__nav__col__title">menu</div>
+<ul>
+<li><a href="index-2.html">Home</a>
+</li>
+<li><a href="Places.html">Places</a>
+</li>
+<li><a href="Events.html">Events</a>
+</li>
+<li><a href="Gallery.html">Gallery</a>
+</li>
+</ul>
+<ul>
+<li><a href="blog.html">Blog</a>
+</li>
+<li><a href="Single-Post_Standart.html">Help</a>
+</li>
+<li><a href="Single-Post_Standart.html">Account</a>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div class="shared">
+<div class="container clearfix">
+<div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </div>
+
+<div class="stores">
+<a href="#" class="stores-black-gp"><img src="img/icon-googleplay.png" alt="">
+</a>
+<a href="#" class="stores-black-apps"><img src="img/apple-ic.png" alt="">
+</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4"></script>
+<script src="js/jquery.min.js"></script>
+
+<script src="js/chosen.jquery.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.popup.min.js"></script>
+<script src="js/jssor.slider.mini.js"></script>
+<script src="js/lightcase.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/compiled_lib.js"></script>
+<script src="js/custum.js"></script>
+<script src="js/jquery.custom-scrollbar.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+<!-- Mirrored from city2.wpmix.net/htmlgit/cityevents_ajaxed/Add-Place.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 01:44:10 GMT -->
+</html>

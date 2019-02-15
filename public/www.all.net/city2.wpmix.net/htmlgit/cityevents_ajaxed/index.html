@@ -1,0 +1,1304 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from city2.wpmix.net/htmlgit/cityevents_ajaxed/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 01:39:05 GMT -->
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to Event City1</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if lt IE 9]>
+    <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="home">
+  <!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+  <div class="b-preloader animated yt-loader">
+    <div class="b-preloader__decor"></div>
+  </div>
+  <header class="b-header clearfix">
+    <a href="index-2.html" class="logo"> <img src="img/logo_small.png" alt="Night City" title="Night City"> <span>Night
+        City</span> </a>
+    <a class="weather" href="#"> <img width="35" height="35" src="img/rain-xxl.png" alt="Weather"> <span>+ 24° C</span>
+    </a>
+    <div class="b-header__ctrl">
+      <div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square"
+            aria-hidden="true"></i><span>Submit your place</span></a> </div>
+      <div class="b-header__ctrl__item">
+        <a href="#" class="ab-item login jquery_popup"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My
+            Account</span>
+        </a>
+      </div>
+      <div class="b-header__ctrl__item">
+
+        <form class="searchbox">
+          <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp()">
+          <button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i>
+          </button> <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span> </form>
+      </div>
+    </div>
+
+    <div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down"
+        aria-hidden="true"></i>
+    </div>
+    <nav class="b-nav fadein">
+      <ul>
+        <li class="menu-item-has-children">
+          <a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true"></i>Places </a>
+          <ul>
+            <li><a href="Places.html">Places</a>
+            </li>
+            <li><a href="Single-Place.html">Single place</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children"> <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
+          <ul>
+            <li><a href="Events.html">Events</a>
+            </li>
+            <li><a href="Single-Event.html">Single event</a>
+            </li>
+          </ul>
+        </li>
+        <li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
+        <li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
+        <li class="menu-item-has-children"> <a href="blog.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Blog</a>
+          <ul>
+            <li><a href="Single-Post_Standart.html">Single Page</a>
+            </li>
+            <li><a href="blog.html">Blog category</a>
+            </li>
+            <li><a href="#">Wide mansonry</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children"> <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Apps</a>
+          <ul>
+            <li><a href="Single-Post_Standart.html">iPhone</a>
+            </li>
+            <li><a href="#">Android</a>
+            </li>
+          </ul>
+        </li>
+        <li> <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a> </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <div class="b-main-container" id="content">
+    <div class="b-promo lazy" data-src="img/home-bg.jpg">
+      <div class="b-placeholder"></div>
+      <div class="b-stars">
+        <div class="stars"></div>
+      </div>
+      <div class="overlay"></div>
+      <div class="b-promo__search container">
+        <h1 class="b-promo__title">Welcome to Beautiful Night City</h1>
+        <h6 class="b-promo__sub-title">See and visit interesting places. Share experiences with your friends.</h6>
+        <form method="post" action="#">
+          <div class="b-promo__form">
+            <div class="b-promo__form__col1">
+              <input type="text" class="b-promo__form__input m--border-radius-left" placeholder="Find places or events"
+                name="search"> </div>
+            <div class="b-promo__form__col1">
+              <input type="text" class="b-promo__form__input" placeholder="Enter Location" name="location"> </div>
+            <div class="b-promo__form__col1">
+              <select data-placeholder="Choose a Country..." class="chosen-select" tabindex="2">
+                <option value="United States">Choose a Country...</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Aland Islands">Aland Islands</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="American Samoa">American Samoa</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Anguilla">Anguilla</option>
+                <option value="Antarctica">Antarctica</option>
+                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+              </select>
+            </div>
+            <div class="b-promo__form__col2">
+              <button class="btn btn-success m--border-radius-right" type="submit">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="scroll_block"> <img width="23" height="36" alt="Use your scrollwheel :)" class="animated infinite bounce"
+          src="img/scroll.png"> </div>
+    </div>
+
+    <div class="b-counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12"> <span class="b-counter__item"><i class="fa fa-building-o"
+                aria-hidden="true"></i> <b>365</b> Places</span> </div>
+          <div class="col-md-4 col-sm-4 col-xs-12"> <span class="b-counter__item"><i class="fa fa-music" aria-hidden="true"></i>
+              <b>180</b> Events</span> </div>
+          <div class="col-md-4 col-sm-4 col-xs-12"> <span class="b-counter__item"><i class="fa fa-camera-retro"
+                aria-hidden="true"></i> <b>1045</b> Photos</span> </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-pop-places container">
+      <h2 class="b-cont-title">The most popular places</h2>
+      <div class="b-slider owl-carousel owl-carousel-1">
+        <div class="b-pop-places__item">
+          <div class="b-pop-place">
+            <div class="b-pop-place__img">
+              <a href="Single-Place.html"><img width="370" height="245" class="b-pop-place__img__img" src="img/src/pop-place-1.jpg"
+                  alt="Popular place 1">
+              </a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-pop-place__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$100 - $150</div>
+              </div>
+            </div>
+            <div class="b-pop-place__desc clearfix">
+              <div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln
+                square steak</a>
+              <h5 class="b-pop-place__cat">Restaurant</h5>
+            </div>
+          </div>
+        </div>
+        <div class="b-pop-places__item">
+          <div class="b-pop-place">
+            <div class="b-pop-place__img">
+              <a href="Single-Place.html"><img width="370" height="245" class="b-pop-place__img__img" src="img/src/pop-place-2.jpg"
+                  alt="Popular place 1">
+              </a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-pop-place__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$100 - $150</div>
+              </div>
+            </div>
+            <div class="b-pop-place__desc clearfix">
+              <div class="b-pop-place__rating">5,0</div> <a href="Single-Place.html" class="b-pop-place__name">Club a
+                steakhouse</a>
+              <h5 class="b-pop-place__cat">Restaurant</h5>
+            </div>
+          </div>
+        </div>
+        <div class="b-pop-places__item">
+          <div class="b-pop-place">
+            <div class="b-pop-place__img">
+              <a href="Single-Place.html"><img width="370" height="245" class="b-pop-place__img__img" src="img/src/pop-place-3.jpg"
+                  alt="Popular place 1">
+              </a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-pop-place__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$100 - $150</div>
+              </div>
+            </div>
+            <div class="b-pop-place__desc clearfix">
+              <div class="b-pop-place__rating">4,0</div> <a href="Single-Place.html" class="b-pop-place__name">Spice
+                symphony</a>
+              <h5 class="b-pop-place__cat">Restaurant</h5>
+            </div>
+          </div>
+        </div>
+        <div class="b-pop-places__item">
+          <div class="b-pop-place">
+            <div class="b-pop-place__img">
+              <a href="Single-Place.html"><img width="370" height="245" class="b-pop-place__img__img" src="img/src/pop-place-1.jpg"
+                  alt="Popular place 1">
+              </a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-pop-place__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$100 - $150</div>
+              </div>
+            </div>
+            <div class="b-pop-place__desc clearfix">
+              <div class="b-pop-place__rating">4,8</div> <a href="Single-Place.html" class="b-pop-place__name">Lincoln
+                square steak</a>
+              <h5 class="b-pop-place__cat">Restaurant</h5>
+            </div>
+          </div>
+        </div>
+        <div class="b-pop-places__item">
+          <div class="b-pop-place">
+            <div class="b-pop-place__img">
+              <a href="Single-Place.html"><img width="370" height="245" class="b-pop-place__img__img" src="img/src/pop-place-2.jpg"
+                  alt="Popular place 1">
+              </a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-pop-place__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$100 - $150</div>
+              </div>
+            </div>
+            <div class="b-pop-place__desc clearfix">
+              <div class="b-pop-place__rating">5,0</div> <a href="Single-Place.html" class="b-pop-place__name">Club a
+                steakhouse</a>
+              <h5 class="b-pop-place__cat">Restaurant</h5>
+            </div>
+          </div>
+        </div>
+        <div class="b-pop-places__item">
+          <div class="b-pop-place">
+            <div class="b-pop-place__img">
+              <a href="Single-Place.html"><img width="370" height="245" class="b-pop-place__img__img" src="img/src/pop-place-3.jpg"
+                  alt="Popular place 1">
+              </a> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-pop-place__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$100 - $150</div>
+              </div>
+            </div>
+            <div class="b-pop-place__desc clearfix">
+              <div class="b-pop-place__rating">4,0</div> <a href="Single-Place.html" class="b-pop-place__name">Spice
+                symphony</a>
+              <h5 class="b-pop-place__cat">Restaurant</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row m--centered">
+        <div class="col-md-4 col-md-offset-4"><a href="Places.html" class="btn">View all places</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-place-cat container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="b-place-cat__item">
+            <div class="b-place-cat__item__img"> <img src="img/src/place-category-1.jpg" alt=""> </div> <a class="b-place-cat__item__link"
+              href="Places.html"><i class="fa fa-glass" aria-hidden="true"></i><span>135 Bars</span></a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-place-cat__item">
+            <div class="b-place-cat__item__img"> <img class="b-place-cat__item__img" src="img/src/place-category-9.jpg"
+                alt=""> </div> <a class="b-place-cat__item__link" href="Places.html"><i class="fa fa-cutlery"
+                aria-hidden="true"></i>76 Restaurants</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-place-cat__item">
+            <div class="b-place-cat__item__img"> <img class="b-place-cat__item__img" src="img/src/place-category-3.jpg"
+                alt=""> </div> <a class="b-place-cat__item__link" href="Places.html"><i class="fa fa-coffee"
+                aria-hidden="true"></i>53 Snack bars</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-place-cat__item">
+            <div class="b-place-cat__item__img"> <img class="b-place-cat__item__img" src="img/src/place-category-4.jpg"
+                alt=""> </div> <a class="b-place-cat__item__link" href="Places.html"><i class="fa fa-star-half-o"
+                aria-hidden="true"></i>67 Night clubs</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-place-cat__item">
+            <div class="b-place-cat__item__img"> <img class="b-place-cat__item__img" src="img/src/place-category-5.jpg"
+                alt=""> </div> <a class="b-place-cat__item__link" href="Places.html"><i class="fmr fmr-icon-4514"></i>39
+              Entertainments</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-place-cat__item">
+            <div class="b-place-cat__item__img"> <img class="b-place-cat__item__img" src="img/src/cinema1.jpg" alt="">
+            </div> <a class="b-place-cat__item__link" href="Places.html"><i class="fa fa-film" aria-hidden="true"></i>20
+              Cinemas</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-place-cat__item">
+            <div class="b-place-cat__item__img"> <img class="b-place-cat__item__img" src="img/src/place-category-10.jpg"
+                alt=""> </div> <a class="b-place-cat__item__link" href="Places.html"><i class="fa fa-bed" aria-hidden="true"></i>86
+              Hotels</a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-place-cat__item">
+            <div class="b-place-cat__item__img"> <img class="b-place-cat__item__img" src="img/src/place-category-11.jpg"
+                alt=""> </div> <a class="b-place-cat__item__link" href="Places.html"><i class="fa fa-shopping-cart"
+                aria-hidden="true"></i>129 Shops</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-events container">
+      <h2 class="b-cont-title">Upcoming events</h2>
+      <div class="b-slider owl-carousel owl-carousel-1">
+        <div class="b-events__item">
+          <div class="b-event">
+            <div class="b-event__img">
+              <a href="Single-Event.html"><img width="370" height="245" class="b-event__img__img" src="img/src/upcoming-event-1.jpg"
+                  alt="Upcoming event 1">
+              </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-event__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$50 - $100</div>
+              </div>
+            </div>
+            <div class="b-event__desc clearfix">
+              <div class="press--left"> <a href="Single-Event.html" class="b-event__name">Lincoln square steak</a>
+                <h5 class="b-event__cat">Restaurant</h5>
+              </div> <a href="#" class="btn btn--sm press--right jquery_popup noajax">Buy Ticket</a>
+            </div>
+          </div>
+        </div>
+        <div class="b-events__item">
+          <div class="b-event">
+            <div class="b-event__img">
+              <a href="Single-Event.html"><img width="370" height="245" class="b-event__img__img" src="img/src/upcoming-event-2.jpg"
+                  alt="Upcoming event 2">
+              </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-event__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$50 - $100</div>
+              </div>
+            </div>
+            <div class="b-event__desc clearfix">
+              <div class="press--left"> <a href="Single-Event.html" class="b-event__name">Lincoln square steak</a>
+                <h5 class="b-event__cat">Restaurant</h5>
+              </div> <a href="#" class="btn btn--sm press--right jquery_popup noajax">Buy Ticket</a>
+            </div>
+          </div>
+        </div>
+        <div class="b-events__item">
+          <div class="b-event">
+            <div class="b-event__img">
+              <a href="Single-Event.html"><img width="370" height="245" class="b-event__img__img" src="img/src/upcoming-event-3.jpg"
+                  alt="Upcoming event 3">
+              </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-event__links">
+                <div class="press--left"> <a href="#" class="b-event__links__item" data-toggle="tooltip" data-placement="right"
+                    title="Tooltip on bottom"><i class="fa fa-music" aria-hidden="true"></i></a> <a href="#" class="b-event__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Tooltip on bottom"><i class="fa fa-book"
+                      aria-hidden="true"></i></a> <a href="#" class="b-event__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Tooltip on bottom"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$50 - $100</div>
+              </div>
+            </div>
+            <div class="b-event__desc clearfix">
+              <div class="press--left"> <a href="Single-Event.html" class="b-event__name">Lincoln square steak</a>
+                <h5 class="b-event__cat">Restaurant</h5>
+              </div> <a href="#" class="btn btn--sm press--right jquery_popup noajax">Buy Ticket</a>
+            </div>
+          </div>
+        </div>
+        <div class="b-events__item">
+          <div class="b-event">
+            <div class="b-event__img">
+              <a href="Single-Event.html"><img width="370" height="245" class="b-event__img__img" src="img/src/upcoming-event-1.jpg"
+                  alt="Upcoming event 1">
+              </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-event__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$50 - $100</div>
+              </div>
+            </div>
+            <div class="b-event__desc clearfix">
+              <div class="press--left"> <a href="Single-Event.html" class="b-event__name">Lincoln square steak</a>
+                <h5 class="b-event__cat">Restaurant</h5>
+              </div> <a href="#" class="btn btn--sm press--right jquery_popup noajax">Buy Ticket</a>
+            </div>
+          </div>
+        </div>
+        <div class="b-events__item">
+          <div class="b-event">
+            <div class="b-event__img">
+              <a href="Single-Event.html"><img class="b-event__img__img" src="img/src/upcoming-event-2.jpg" alt="Upcoming event 2">
+              </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-event__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$50 - $100</div>
+              </div>
+            </div>
+            <div class="b-event__desc clearfix">
+              <div class="press--left"> <a href="Single-Event.html" class="b-event__name">Lincoln square steak</a>
+                <h5 class="b-event__cat">Restaurant</h5>
+              </div> <a href="#" class="btn btn--sm press--right jquery_popup noajax">Buy Ticket</a>
+            </div>
+          </div>
+        </div>
+        <div class="b-events__item">
+          <div class="b-event">
+            <div class="b-event__img">
+              <a href="Single-Event.html"><img width="370" height="245" class="b-event__img__img" src="img/src/upcoming-event-3.jpg"
+                  alt="Upcoming event 3">
+              </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#" class="b-icon-like" data-toggle="tooltip" data-placement="left" title="Like"><i class="fa fa-heart"
+                  aria-hidden="true"></i></a>
+              <div class="b-event__links">
+                <div class="press--left"> <a href="#" class="b-pop-place__links__item" data-toggle="tooltip"
+                    data-placement="right" title="Live music"><i class="fa fa-music" aria-hidden="true"></i></a> <a
+                    href="#" class="b-pop-place__links__item" data-toggle="tooltip" data-placement="right" title="Menu"><i
+                      class="fa fa-book" aria-hidden="true"></i></a> <a href="#" class="b-pop-place__links__item"
+                    data-toggle="tooltip" data-placement="right" title="Photo"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                </div>
+                <div class="press--right">$50 - $100</div>
+              </div>
+            </div>
+            <div class="b-event__desc clearfix">
+              <div class="press--left"> <a href="Single-Event.html" class="b-event__name">Lincoln square steak</a>
+                <h5 class="b-event__cat">Restaurant</h5>
+              </div> <a href="#" class="btn btn--sm press--right jquery_popup noajax">Buy Ticket</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row m--centered">
+        <div class="col-md-4 col-md-offset-4"><a href="Events.html" class="btn">View all events</a>
+        </div>
+      </div>
+      <div class="hidden b-jquery-popup">
+        <div class="b-form-reg-popup">
+          <h2 class="b-form-reg-popup__title m--centered">Register Now</h2>
+          <div class="b-form__row clearfix">
+            <a href="#" class="b-form-reg-popup__facebook press--left"><img width="206" height="58" src="img/facebook-link.jpg"
+                alt="">
+            </a>
+            <a href="#" class="b-form-reg-popup__google press--right"><img width="206" height="58" src="img/google-link.jpg"
+                alt="">
+            </a>
+          </div>
+          <div class="b-form__row">
+            <input type="text" placeholder="Your Name"> </div>
+          <div class="b-form__row">
+            <input type="text" placeholder="Email Address"> </div>
+          <div class="b-form__row">
+            <input type="text" placeholder="Phone Number"> </div>
+          <div class="b-form__row">
+            <select data-placeholder="Choose a Country..." class="chosen-select-2" tabindex="2">
+              <option value="United States">Choose a Country...</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Aland Islands">Aland Islands</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antarctica">Antarctica</option>
+              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Aruba">Aruba</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bahrain">Bahrain</option>
+            </select>
+          </div>
+          <div class="b-form__row m--centered"> <a href="#" class="btn">Register now</a> </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-latest-photo">
+      <div class="container">
+        <h2 class="b-cont-title">Latest photo reports</h2>
+        <div class="b-slider owl-carousel owl-carousel-1">
+          <div class="b-latest-photo__item">
+            <div class="b-album">
+              <a href="Gallery_Photos.html" class="b-album__title"> <img width="370" height="370" class="b-album__img"
+                  src="img/src/latest-photo-1.jpg" alt="latest photo 1"> </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">28</div>
+              </div>
+              <div class="b-album__top-links"> <a href="#" class="b-album__top-links__item" data-toggle="tooltip"
+                  data-placement="left" title="Photos"><i class="fa fa-camera" aria-hidden="true"></i> 21</a> </div>
+              <div class="b-album__links">The Rose & crown party</div>
+            </div>
+          </div>
+          <div class="b-latest-photo__item">
+            <div class="b-album">
+              <a href="Gallery_Photos.html" class="b-album__title"> <img width="370" height="370" class="b-album__img"
+                  src="img/src/latest-photo-2.jpg" alt="latest photo 2"> </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div>
+              <div class="b-album__top-links"> <a href="#" class="b-album__top-links__item" data-toggle="tooltip"
+                  data-placement="left" title="Photos"><i class="fa fa-camera" aria-hidden="true"></i> 73</a> <a href="#"
+                  class="b-album__top-links__item" data-toggle="tooltip" data-placement="left" title="Videos"><i class="fa fa-video-camera"
+                    aria-hidden="true"></i> 5</a> </div>
+              <div class="b-album__links">Big music festival</div>
+            </div>
+          </div>
+          <div class="b-latest-photo__item">
+            <div class="b-album">
+              <a href="Gallery_Photos.html" class="b-album__title"><img width="370" height="370" class="b-album__img"
+                  src="img/src/latest-photo-3.jpg" alt="latest photo 3">
+              </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">30</div>
+              </div>
+              <div class="b-album__top-links"> <a href="#" class="b-album__top-links__item" data-toggle="tooltip"
+                  data-placement="left" title="Photos"><i class="fa fa-camera" aria-hidden="true"></i> 22</a> <a href="#"
+                  class="b-album__top-links__item" data-toggle="tooltip" data-placement="left" title="Videos"><i class="fa fa-video-camera"
+                    aria-hidden="true"></i> 1</a> </div>
+              <div class="b-album__links">Songdew rockfest</div>
+            </div>
+          </div>
+          <div class="b-latest-photo__item">
+            <div class="b-album">
+              <a href="Gallery_Photos.html" class="b-album__title"> <img width="370" height="370" class="b-album__img"
+                  src="img/src/latest-photo-1.jpg" alt="latest photo 1"> </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">28</div>
+              </div>
+              <div class="b-album__top-links"> <a href="#" class="b-album__top-links__item" data-toggle="tooltip"
+                  data-placement="left" title="Photos"><i class="fa fa-camera" aria-hidden="true"></i> 21</a> </div>
+              <div class="b-album__links">The Rose & crown party</div>
+            </div>
+          </div>
+          <div class="b-latest-photo__item">
+            <div class="b-album">
+              <a href="Gallery_Photos.html" class="b-album__title"> <img width="370" height="370" class="b-album__img"
+                  src="img/src/latest-photo-2.jpg" alt="latest photo 2"> </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div>
+              <div class="b-album__top-links"> <a href="#" class="b-album__top-links__item" data-toggle="tooltip"
+                  data-placement="left" title="Photos"><i class="fa fa-camera" aria-hidden="true"></i> 73</a> <a href="#"
+                  class="b-album__top-links__item" data-toggle="tooltip" data-placement="left" title="Videos"><i class="fa fa-video-camera"
+                    aria-hidden="true"></i> 5</a> </div>
+              <div class="b-album__links">Big music festival</div>
+            </div>
+          </div>
+          <div class="b-latest-photo__item">
+            <div class="b-album">
+              <a href="Gallery_Photos.html" class="b-album__title"> <img width="370" height="370" class="b-album__img"
+                  src="img/src/latest-photo-3.jpg" alt="latest photo 3"> </a>
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">30</div>
+              </div>
+              <div class="b-album__top-links"> <a href="#" class="b-album__top-links__item" data-toggle="tooltip"
+                  data-placement="left" title="Photos"><i class="fa fa-camera" aria-hidden="true"></i> 22</a> <a href="#"
+                  class="b-album__top-links__item" data-toggle="tooltip" data-placement="left" title="Videos"><i class="fa fa-video-camera"
+                    aria-hidden="true"></i> 1</a> </div>
+              <div class="b-album__links">Songdew rockfest</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row m--centered">
+          <div class="col-md-4 col-md-offset-4"><a href="Gallery.html" class="btn">View all gallery</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="b-promo2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <h2 class="b-cont-title b-cont-title--white">Get started with night city</h2>
+            <p>Quisque vestibulum enim in ex posuere pellentesque vivamus in sagittis metus. Mauris rhoncus tellus quis
+              erat vestibulum feugiat. Duis nec dui sed felis pharetra. Integer commodo nisl sed pretium dictum.</p>
+            <ul class="b-promo2__list">
+              <li> <i class="b-promo2__list__icon fmr fmr-icon-319"></i>
+                <h4 class="b-promo2__list__title">Build own city guide</h4>
+                <p>Your city guide with a unique design is ready! Add a photo gallery using Instagram ID.</p>
+              </li>
+              <li> <i class="b-promo2__list__icon fmr fmr-icon-539"></i>
+                <h4 class="b-promo2__list__title">Markers on the map and google street and busines view</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              </li>
+              <li> <i class="b-promo2__list__icon fmr fmr-icon-1426"></i>
+                <h4 class="b-promo2__list__title">Information and reviews</h4>
+                <p>Add the best professionals in any category, add description of services, prices, contacts,
+                  addresses, reviews and ratings.</p>
+              </li>
+              <li> <i class="b-promo2__list__icon fmr fmr-icon-346"></i>
+                <h4 class="b-promo2__list__title">Discount coupons and promotions</h4>
+                <p>Users can share places and get coupons. Viral promotion is the best.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12"> <img width="1114" height="568" src="img/src/prev-1.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="row b-promo2__footer">
+        <div class="col-md-4 col-md-offset-4 m--centered"> <a href="Single-Post_Standart.html" class="btn">Get started
+            now</a> </div>
+      </div>
+    </div>
+
+    <div class="b-people-say container">
+      <h2 class="b-cont-title">What people say</h2>
+      <div class="b-slider owl-carousel owl-carousel-2">
+        <div>
+          <div class="b-comment">
+            <div class="b-comment__avatar"> <img width="90" height="90" class="b-comment__avatar__img" src="img/src/round-avatar-1.jpg"
+                alt="avatar 1">
+              <div class="b-comment__avatar__name">Anna D.</div>
+            </div>
+            <div class="b-comment__cont">
+              <p>Vivamus sed mauris commodo, lobortis leo eget, porta elit. Integer viverra vehicula risus eget ornare.
+                Mauris rhoncus fermentum quam, quis hendrerit varius eget. Praesent ac quam leo. Ut in porttitor magna.</p>
+              <div class="b-comment__cont__footer clearfix">
+                <div class="b-comment__cont__rating press--left">
+                  <div class="rating"> <span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span
+                      class="gold">★</span><span class="gold">★</span> </div>(5.0)
+                </div>
+                <div class="press--right">04.16.2017</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="b-comment">
+            <div class="b-comment__avatar"> <img width="90" height="90" class="b-comment__avatar__img" src="img/src/round-avatar-2.jpg"
+                alt="avatar 2">
+              <div class="b-comment__avatar__name">Mark L.</div>
+            </div>
+            <div class="b-comment__cont">
+              <p>Pellentesque ipsum nunc, sollicitudin in tellus ac, suscipit sagittis lectus. Duis non dolor in urna
+                fauci bus accumsan vel vitae libero. Duis vel felis sceleris que, dapibus odio in, suscipit arcu. Sed
+                tortor lacus, sollicitudin ut finibus ut, elementum.</p>
+              <div class="b-comment__cont__footer clearfix">
+                <div class="b-comment__cont__rating press--left">
+                  <div class="rating"> <span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span
+                      class="gold">★</span><span class="gold">★</span> </div> (5.0)
+                </div>
+                <div class="press--right">04.22.2017</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="b-comment">
+            <div class="b-comment__avatar"> <img width="90" height="90" class="b-comment__avatar__img" src="img/src/round-avatar-1.jpg"
+                alt="avatar 1">
+              <div class="b-comment__avatar__name">Anna D.</div>
+            </div>
+            <div class="b-comment__cont">
+              <p>Vivamus sed mauris commodo, lobortis leo eget, porta elit. Integer viverra vehicula risus eget ornare.
+                Mauris rhoncus fermentum quam, quis hendrerit varius eget. Praesent ac quam leo. Ut in porttitor magna.</p>
+              <div class="b-comment__cont__footer clearfix">
+                <div class="b-comment__cont__rating press--left">
+                  <div class="rating"> <span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span
+                      class="gold">★</span><span class="gold">★</span> </div> (5.0)
+                </div>
+                <div class="press--right">04.16.2017</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="b-comment">
+            <div class="b-comment__avatar"> <img width="90" height="90" class="b-comment__avatar__img" src="img/src/round-avatar-2.jpg"
+                alt="avatar 2">
+              <div class="b-comment__avatar__name">Mark L.</div>
+            </div>
+            <div class="b-comment__cont">
+              <p>Pellentesque ipsum nunc, sollicitudin in tellus ac, suscipit sagittis lectus. Duis non dolor in urna
+                fauci bus accumsan vel vitae libero. Duis vel felis sceleris que, dapibus odio in, suscipit arcu. Sed
+                tortor lacus, sollicitudin ut finibus ut, elementum.</p>
+              <div class="b-comment__cont__footer clearfix">
+                <div class="b-comment__cont__rating press--left">
+                  <div class="rating"> <span class="gold">★</span><span class="gold">★</span><span class="gold">★</span><span
+                      class="gold">★</span><span class="gold">★</span> </div> (5.0)
+                </div>
+                <div class="press--right">04.22.2017</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="b-add-place">
+      <div class="container">
+        <h2 class="b-cont-title">Add your place</h2>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+            <div class="b-price-card">
+              <div class="b-price-card__img"> <img width="370" height="205" class="b-price-card__img__img" src="img/src/plan-1.jpg"
+                  alt="plan 1">
+                <h4 class="b-price-card__title">Basic plan</h4>
+                <div class="b-price-card__price"><b class="b-price-card__price__digit">99</b>/mo</div>
+              </div>
+              <div class="b-price-card__cont">
+                <div class="b-price-card__cont__row"><i><b>One</b></i> client</div>
+                <div class="b-price-card__cont__row"><i><b>Google</b></i> plecement</div>
+                <div class="b-price-card__cont__row"><i><b>Promotion</b></i> in social network</div>
+                <div class="b-price-card__cont__row"><i><b>Testimonials</b></i> and reviews</div>
+                <div class="b-price-card__cont__row"><i><b>E-mail</b></i> Support</div> <a href="Single-Post_Standart.html"
+                  class="btn">Get started</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+            <div class="b-price-card">
+              <div class="b-price-card__img"> <img width="370" height="290" class="b-price-card__img__img" src="img/src/plan-2.jpg"
+                  alt="plan 2">
+                <h4 class="b-price-card__title">Standart plan</h4>
+                <div class="b-price-card__price"><b class="b-price-card__price__digit">399</b>/year</div>
+                <p class="b-price-card__desc">Mauris convallis, lorem ut consectetur facilisis, magna lacus cursus</p>
+              </div>
+              <div class="b-price-card__cont">
+                <div class="b-price-card__cont__row"><i><b>Many</b></i> client</div>
+                <div class="b-price-card__cont__row"><i><b>Google</b></i> plecement</div>
+                <div class="b-price-card__cont__row"><i><b>Promotion</b></i> in social network</div>
+                <div class="b-price-card__cont__row"><i><b>Testimonials</b></i> and reviews</div>
+                <div class="b-price-card__cont__row"><i><b>E-mail</b></i> Support</div> <a href="Single-Post_Standart.html"
+                  class="btn">Get started</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+            <div class="b-price-card">
+              <div class="b-price-card__img"> <img width="370" height="205" class="b-price-card__img__img" src="img/src/plan-3.jpg"
+                  alt="plan 3">
+                <h4 class="b-price-card__title">Vip plan</h4>
+                <div class="b-price-card__price"><b class="b-price-card__price__digit">199</b>/mo</div>
+              </div>
+              <div class="b-price-card__cont">
+                <div class="b-price-card__cont__row"><i><b>One</b></i> client</div>
+                <div class="b-price-card__cont__row"><i><b>Google</b></i> plecement</div>
+                <div class="b-price-card__cont__row"><i><b>Promotion</b></i> in social network</div>
+                <div class="b-price-card__cont__row"><i><b>Testimonials</b></i> and reviews</div>
+                <div class="b-price-card__cont__row"><i><b>E-mail</b></i> Support</div> <a href="Single-Post_Standart.html"
+                  class="btn">Get started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="b-counter2 b-parallax lazy" data-type="background" data-speed="8" data-src="img/src/banner-2.jpg">
+      <div class="b-placeholder"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <h2 class="b-counter2__title">345</h2>
+            <h4 class="b-counter2__sub-title">Listings</h4>
+            <p>Curabitur blandit efficitur magna eu cursus aliquam</p>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <h2 class="b-counter2__title">843</h2>
+            <h4 class="b-counter2__sub-title">Users</h4>
+            <p>Sed eget facilisis eros, in vehicula dictum maximus</p>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <h2 class="b-counter2__title">58</h2>
+            <h4 class="b-counter2__sub-title">Listing types</h4>
+            <p>Vestibulum euismod, vel posuere vulputate, velit mattis</p>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <h2 class="b-counter2__title">14</h2>
+            <h4 class="b-counter2__sub-title">Categories</h4>
+            <p>Aliquam diam justo, hendrerit in lacinia condimentum</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="b-latest-post container">
+      <h2 class="b-cont-title">Latest blog posts</h2>
+      <div class="b-slider owl-carousel owl-carousel-1">
+        <div>
+          <article class="b-sm-post">
+            <div class="b-sm-post__img-cont"> <img width="370" height="245" src="img/src/sm-post-1.jpg" alt="post 1">
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#html_popup" class="b-sm-post__share html_popup noajax" data-toggle="tooltip"
+                data-placement="left" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              <div class="b-sm-post__links"> <a href="#" class="b-sm-post__links__views" data-toggle="tooltip"
+                  data-placement="right" title="Views"><i class="fa fa-eye" aria-hidden="true"></i> 137</a> <a href="#"
+                  class="b-sm-post__links__comments" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                    class="fa fa-comment-o" aria-hidden="true"></i> 2</a> <a href="#" class="b-sm-post__tag">Sport</a>
+              </div>
+            </div>
+            <div class="b-sm-post__text-cont">
+              <h2 class="b-sm-post__text-cont__link"><a href="Single-Post_Standart.html" class="b-sm-post__text-cont__link">Curabitur
+                  posuere facilisis felis aliquet eleifend dictum sem</a></h2>
+              <footer class="b-sm-post__footer"> <span class="b-sm-post__footer__author">by <a href="#">Anna Doe</a></span>
+                <span class="b-sm-post__footer__tags">
+                  <a href="Single-Post_Standart.html">City</a>,
+                  <a href="Single-Post_Standart.html">Sport</a>,
+                  <a href="Single-Post_Standart.html">People</a>
+                </span> </footer>
+            </div>
+          </article>
+        </div>
+        <div>
+          <article class="b-sm-post">
+            <div class="b-sm-post__img-cont"> <img width="370" height="245" src="img/src/sm-post-2.jpg" alt="post 2">
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#html_popup" class="b-sm-post__share html_popup noajax" data-toggle="tooltip"
+                data-placement="left" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              <div class="b-sm-post__links"> <a href="#" class="b-sm-post__links__views" data-toggle="tooltip"
+                  data-placement="right" title="Views"><i class="fa fa-eye" aria-hidden="true"></i> 137</a> <a href="#"
+                  class="b-sm-post__links__comments" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                    class="fa fa-comment-o" aria-hidden="true"></i> 2</a> <a href="#" class="b-sm-post__tag">People</a>
+              </div>
+            </div>
+            <div class="b-sm-post__text-cont">
+              <h2 class="b-sm-post__text-cont__link"><a href="Single-Post_Standart.html" class="b-sm-post__text-cont__link">Nam
+                  blandit, enim sit amet porttitor consectetur, augue nibh commodo dolor non efficitur risus dolor ut
+                  ligula</a></h2>
+              <footer class="b-sm-post__footer"> <span class="b-sm-post__footer__author">by <a href="#">Anna Doe</a></span>
+                <span class="b-sm-post__footer__tags">
+                  <a href="Single-Post_Standart.html">City</a>,
+                  <a href="Single-Post_Standart.html">Sport</a>,
+                  <a href="Single-Post_Standart.html">People</a>
+                </span> </footer>
+            </div>
+          </article>
+        </div>
+        <div>
+          <article class="b-sm-post">
+            <div class="b-sm-post__img-cont"> <img width="370" height="245" src="img/src/sm-post-4.jpg" alt="post 4">
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#html_popup" class="b-sm-post__share html_popup noajax" data-toggle="tooltip"
+                data-placement="left" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              <div class="b-sm-post__links"> <a href="#" class="b-sm-post__links__views" data-toggle="tooltip"
+                  data-placement="right" title="Views"><i class="fa fa-eye" aria-hidden="true"></i> 137</a> <a href="#"
+                  class="b-sm-post__links__comments" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                    class="fa fa-comment-o" aria-hidden="true"></i> 2</a> <a href="#" class="b-sm-post__tag">Lifestyle</a>
+              </div>
+            </div>
+            <div class="b-sm-post__text-cont">
+              <h2 class="b-sm-post__text-cont__link"><a href="Single-Post_Standart.html" class="b-sm-post__text-cont__link">Maecenas
+                  vel dolor a eros posuere</a></h2>
+              <footer class="b-sm-post__footer"> <span class="b-sm-post__footer__author">by <a href="#">Anna Doe</a></span>
+                <span class="b-sm-post__footer__tags">
+                  <a href="Single-Post_Standart.html">City</a>,
+                  <a href="Single-Post_Standart.html">Sport</a>,
+                  <a href="Single-Post_Standart.html">People</a>
+                </span> </footer>
+            </div>
+          </article>
+        </div>
+        <div>
+          <article class="b-sm-post">
+            <div class="b-sm-post__img-cont"> <img width="370" height="245" src="img/src/sm-post-1.jpg" alt="post 1">
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#html_popup" class="b-sm-post__share html_popup noajax" data-toggle="tooltip"
+                data-placement="left" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              <div class="b-sm-post__links"> <a href="#" class="b-sm-post__links__views" data-toggle="tooltip"
+                  data-placement="right" title="Views"><i class="fa fa-eye" aria-hidden="true"></i> 137</a> <a href="#"
+                  class="b-sm-post__links__comments" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                    class="fa fa-comment-o" aria-hidden="true"></i> 2</a> <a href="#" class="b-sm-post__tag">Sport</a>
+              </div>
+            </div>
+            <div class="b-sm-post__text-cont">
+              <h2 class="b-sm-post__text-cont__link"><a href="Single-Post_Standart.html" class="b-sm-post__text-cont__link">Curabitur
+                  posuere facilisis felis aliquet eleifend dictum sem</a></h2>
+              <footer class="b-sm-post__footer"> <span class="b-sm-post__footer__author">by <a href="#">Anna Doe</a></span>
+                <span class="b-sm-post__footer__tags">
+                  <a href="Single-Post_Standart.html">City</a>,
+                  <a href="Single-Post_Standart.html">Sport</a>,
+                  <a href="Single-Post_Standart.html">People</a>
+                </span> </footer>
+            </div>
+          </article>
+        </div>
+        <div>
+          <article class="b-sm-post">
+            <div class="b-sm-post__img-cont"> <img width="370" height="245" src="img/src/sm-post-2.jpg" alt="post 2">
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#html_popup" class="b-sm-post__share html_popup noajax" data-toggle="tooltip"
+                data-placement="left" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              <div class="b-sm-post__links"> <a href="#" class="b-sm-post__links__views" data-toggle="tooltip"
+                  data-placement="right" title="Views"><i class="fa fa-eye" aria-hidden="true"></i> 137</a> <a href="#"
+                  class="b-sm-post__links__comments" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                    class="fa fa-comment-o" aria-hidden="true"></i> 2</a> <a href="#" class="b-sm-post__tag">People</a>
+              </div>
+            </div>
+            <div class="b-sm-post__text-cont">
+              <h2 class="b-sm-post__text-cont__link"><a href="Single-Post_Standart.html" class="b-sm-post__text-cont__link">Nam
+                  blandit, enim sit amet porttitor consectetur, augue nibh commodo dolor non efficitur risus dolor ut
+                  ligula</a></h2>
+              <footer class="b-sm-post__footer"> <span class="b-sm-post__footer__author">by <a href="#">Anna Doe</a></span>
+                <span class="b-sm-post__footer__tags">
+                  <a href="Single-Post_Standart.html">City</a>,
+                  <a href="Single-Post_Standart.html">Sport</a>,
+                  <a href="Single-Post_Standart.html">People</a>
+                </span> </footer>
+            </div>
+          </article>
+        </div>
+        <div>
+          <article class="b-sm-post">
+            <div class="b-sm-post__img-cont"> <img width="370" height="245" src="img/src/sm-post-4.jpg" alt="post 4">
+              <div class="b-sm-post__date">
+                <div class="b-sm-post__month">apr</div>
+                <div class="b-sm-post__day">29</div>
+              </div> <a href="#html_popup" class="b-sm-post__share html_popup noajax" data-toggle="tooltip"
+                data-placement="left" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              <div class="b-sm-post__links"> <a href="#" class="b-sm-post__links__views" data-toggle="tooltip"
+                  data-placement="right" title="Views"><i class="fa fa-eye" aria-hidden="true"></i> 137</a> <a href="#"
+                  class="b-sm-post__links__comments" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                    class="fa fa-comment-o" aria-hidden="true"></i> 2</a> <a href="#" class="b-sm-post__tag">Lifestyle</a>
+              </div>
+            </div>
+            <div class="b-sm-post__text-cont">
+              <h2 class="b-sm-post__text-cont__link"><a href="Single-Post_Standart.html" class="b-sm-post__text-cont__link">Maecenas
+                  vel dolor a eros posuere</a></h2>
+              <footer class="b-sm-post__footer"> <span class="b-sm-post__footer__author">by <a href="#">Anna Doe</a></span>
+                <span class="b-sm-post__footer__tags">
+                  <a href="Single-Post_Standart.html">City</a>,
+                  <a href="Single-Post_Standart.html">Sport</a>,
+                  <a href="Single-Post_Standart.html">People</a>
+                </span> </footer>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 m--centered"> <a href="blog.html" class="btn">View all posts</a> </div>
+      </div>
+    </div>
+
+    <div class="b-promo3 lazy" data-src="img/src/banner-3.jpg">
+      <div class="b-placeholder" style="background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyNbqB7c/KQ3UfSoDqFoDgq+R15rMjZtoG44x61Vq+Zk8qP//Z) no-repeat center top; background-size: cover"></div>
+      <div class="container">
+        <div class="row">
+          <div class="b-promo3__cont col-md-6 col-sm-12 col-xs-12">
+            <h2 class="b-cont-title b-cont-title--white">Night city is always with you</h2>
+            <p class="b-promo3__descr">Pellentesque ipsum nunc, sollicitudin in tellus ac, suscipit sagittis lectus.
+              Duis non dolor in urna faucibus accumsan vel vitae libero. Duis vel felis scelerisque, dapibus odio in,
+              suscipit arcu. Sed tortor lacus, sollicitudin ut finibus ut, elementum in tellus.</p>
+            <a href="#" class="b-google-store"></a>
+            <a href="#" class="b-apple-store"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gmap_canvas"></div>
+    <script>
+      main_js = function () {
+
+        'use strict';
+
+        $('.b-slider').addClass('visible');
+
+        //chosen-select init
+
+        $(".chosen-select").chosen({
+          disable_search_threshold: 10,
+          no_results_text: "Oops, nothing found!",
+          width: "100%"
+        });
+
+
+        //********************************************** Stars script **************************************** //
+
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+        if (isChrome || isSafari) {
+          for (var e = 0; 400 > e; e++) {
+            var f = document.createElement("div");
+            f.className = "star";
+            $(".stars").append(f);
+            var g = (.4 * Math.random() + .1).toFixed(3),
+              h = 500 + 300 * Math.random();
+            $(f).css("transform-origin", "0 0 " + h + "px"), $(f).css("transform", " translate3d(0,0,-" + h +
+              "px) rotateY(" + 360 * Math.random() + "deg) rotateX(" + -50 * Math.random() + "deg) scale(" + g +
+              "," + g + ")");
+          }
+        }
+
+        //****************************** owlCarousel plugin activate ******************************//
+        $(".owl-carousel-1").owlCarousel({
+          loop: true,
+          margin: 30,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: true
+            },
+            600: {
+              items: 2,
+              nav: true
+            },
+            1000: {
+              items: 3,
+              nav: true,
+              loop: false
+            }
+          }
+        });
+        $(".owl-carousel-2").owlCarousel({
+          loop: true,
+          margin: 30,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: true
+            },
+            600: {
+              items: 1,
+              nav: true
+            },
+            1000: {
+              items: 2,
+              nav: true,
+              loop: false
+            }
+          }
+        });
+        tooltip();
+
+        // initialize_new();
+
+        $(document).on("click", ".jquery_popup", function () {
+          setTimeout(function () {
+            $(".popup .chosen-select-2").chosen({
+              disable_search_threshold: 10,
+              no_results_text: "Oops, nothing found!",
+              width: "100%"
+            });
+          }, 50);
+        });
+      }
+    </script>
+  </div>
+
+  <div class="b-footer">
+    <div class="b-footer__info">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="b-footer__text col-md-3 col-sm-12"> <a href="index-2.html" class="b-footer__logo">Night City</a>
+            <p>Cras sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <div class="b-footer__copyright">© 2017 All Rights Reserved</div>
+          </div>
+          <div class="b-footer__nav__col col-md-2 col-md-offset-1 col-sm-3 col-xs-4">
+            <div class="b-footer__nav__col__title">About us</div>
+            <ul>
+              <li><a href="Single-Post_Standart.html">Our history</a>
+              </li>
+              <li><a href="Single-Post_Standart.html">Contact us</a>
+              </li>
+              <li><a href="Single-Post_Standart.html">Privacy Policy</a>
+              </li>
+              <li><a href="Single-Post_Standart.html">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+          <div class="b-footer__nav__col col-md-3 col-sm-5 col-xs-8">
+            <div class="b-footer__nav__col__title">Categories</div>
+            <ul>
+              <li><a href="blog.html">Bars</a>
+              </li>
+              <li><a href="blog.html">Food</a>
+              </li>
+              <li><a href="blog.html">Restaurants</a>
+              </li>
+              <li><a href="blog.html">Night life</a>
+              </li>
+            </ul>
+            <ul>
+              <li><a href="blog.html">Activities</a>
+              </li>
+              <li><a href="blog.html">Cinema</a>
+              </li>
+              <li><a href="blog.html">Hotels</a>
+              </li>
+              <li><a href="blog.html">Shopping</a>
+              </li>
+            </ul>
+          </div>
+          <div class="b-footer__nav__col col-md-2 col-sm-4 col-xs-12">
+            <div class="b-footer__nav__col__title">menu</div>
+            <ul>
+              <li><a href="index-2.html">Home</a>
+              </li>
+              <li><a href="Places.html">Places</a>
+              </li>
+              <li><a href="Events.html">Events</a>
+              </li>
+              <li><a href="Gallery.html">Gallery</a>
+              </li>
+            </ul>
+            <ul>
+              <li><a href="blog.html">Blog</a>
+              </li>
+              <li><a href="Single-Post_Standart.html">Help</a>
+              </li>
+              <li><a href="Single-Post_Standart.html">Account</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="shared">
+        <div class="container clearfix">
+          <div class="b-soc"> <a href="#" class="soc-item"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a
+              href="#" class="soc-item"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i
+                class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-dribbble"
+                aria-hidden="true"></i></a> <a href="#" class="soc-item"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+
+          <div class="stores">
+            <a href="#" class="stores-black-gp"><img src="img/icon-googleplay.png" alt="">
+            </a>
+            <a href="#" class="stores-black-apps"><img src="img/apple-ic.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI_iMtLfLxggW38M7mrcv2-Fq2NKf8ab4"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/chosen.jquery.min.js"></script>
+  <script src="js/ion.rangeSlider.min.js"></script>
+  <script src="js/jquery.popup.min.js"></script>
+  <script src="js/jssor.slider.mini.js"></script>
+  <script src="js/lightcase.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/tooltip.js"></script>
+  <script src="js/compiled_lib.js"></script>
+  <script src="js/custum.js"></script>
+  <script src="js/jquery.custom-scrollbar.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+<!-- Mirrored from city2.wpmix.net/htmlgit/cityevents_ajaxed/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 01:40:58 GMT -->
+
+</html>

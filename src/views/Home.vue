@@ -8,7 +8,7 @@
     <div>
       <h2>Search for a show:</h2>
       <p>Search: <input type="text" v-model="text" /></p>
-      <button v-on:click="search()">Search show</button>
+      <button v-on:click="search(results)">Search show</button>
     </div>
     <div>
       <h2>Results:</h2>
@@ -16,13 +16,15 @@
       <div v-for="result in results">
         <div v-for="thing in result">
           <p>{{ thing.title }}</p>
-          <button v-model="id" v-on:click="shuffleSeason(thing.id)">
+          <button v-model="id" v-on:click="shuffleSeason(thing)">
             Shuffle season
           </button>
-          <h3>You should watch episode:</h3>
-          <div v-for="sode in episode">
-            <div v-for="inner in sode">
-              <p>{{ inner }}</p>
+          <div v-if="thing.visible">
+            <h3>You should watch episode:</h3>
+            <div v-for="sode in episode">
+              <div v-for="inner in sode">
+                <p>{{ inner }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -49,24 +51,26 @@ export default {
 
   created: function() {},
   methods: {
-    search: function() {
+    search: function(results) {
       var params = {
         text: this.text
       };
       axios.post("http://localhost:3000/api/searches", params).then(
         function(response) {
           // vince is a bo$$ and came up with this simple AF solution
-          this.results = [];
-          this.episode = [];
-          this.results.push(response.data.results);
+          // this.results = [];
+          // this.episode = [];
+          results.push(response.data.results);
         }.bind(this)
       );
+      console.log("HI:");
+      console.log(results);
     },
 
     shuffleSeason: function(thing) {
       var episode = "";
       var params = {
-        id: thing
+        id: thing.id
       };
       console.log("ID HERE: ");
       console.log(params);
@@ -77,6 +81,12 @@ export default {
         }.bind(this),
         console.log(this)
       );
+      console.log("BEFORE:");
+      console.log(thing);
+      console.log(thing.visible);
+      thing.visible = !thing.visible;
+      console.log("AFTER:");
+      console.log(thing.visible);
     }
   },
   computed: {}

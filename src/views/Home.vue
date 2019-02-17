@@ -16,6 +16,7 @@
       <div v-for="result in results">
         <div v-for="thing in result">
           <p>{{ thing.title }}</p>
+          <img v-bind:src="thing.pic" />
           <button v-model="id" v-on:click="shuffleSeason(thing)">
             Shuffle season
           </button>

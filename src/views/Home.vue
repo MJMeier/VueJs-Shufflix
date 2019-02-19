@@ -8,7 +8,7 @@
     <div>
       <h2>Search for a show:</h2>
       <p>Search: <input type="text" v-model="text" /></p>
-      <button v-on:click="search(results)">Search show</button>
+      <button v-on:click="search()">Search show</button>
     </div>
     <div>
       <h2>Results:</h2>
@@ -16,6 +16,7 @@
       <div v-for="result in results">
         <div v-for="thing in result">
           <p>{{ thing.title }}</p>
+          <img v-bind:src="thing.pic" />
           <button v-model="id" v-on:click="shuffleSeason(thing)">
             Shuffle season
           </button>
@@ -51,20 +52,20 @@ export default {
 
   created: function() {},
   methods: {
-    search: function(results) {
+    search: function() {
       var params = {
         text: this.text
       };
       axios.post("http://localhost:3000/api/searches", params).then(
         function(response) {
           // vince is a bo$$ and came up with this simple AF solution
-          // this.results = [];
+          this.results = [];
           // this.episode = [];
-          results.push(response.data.results);
+          this.results.push(response.data.results);
         }.bind(this)
       );
       console.log("HI:");
-      console.log(results);
+      // console.log(results);
     },
 
     shuffleSeason: function(thing) {

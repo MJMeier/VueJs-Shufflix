@@ -11,9 +11,9 @@
       <button v-on:click="search()">Search show</button>
     </div>
     <div>
-      <h2>Results:</h2>
       <!-- <p>{{ results }}</p> -->
       <div v-for="result in results">
+      <h2>Results:</h2>
         <div v-for="thing in result">
           <p>{{ thing.title }}</p>
           <img v-bind:src="thing.pic" />
@@ -61,7 +61,11 @@ export default {
           // vince is a bo$$ and came up with this simple AF solution
           this.results = [];
           // this.episode = [];
-          this.results.push(response.data.results);
+          if (response.data.results) {
+            (this.results.push(response.data.results));
+          } else {
+            console.log("show not available.");
+          };
         }.bind(this)
       );
       console.log("HI:");

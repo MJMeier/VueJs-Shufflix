@@ -8,12 +8,12 @@
     <div>
       <h2>Search for a show:</h2>
       <p>Search: <input type="text" v-model="text" /></p>
-      <button v-on:click="search()">Search show</button>
+      <button v-on:click="search(isError)">Search show</button>
     </div>
     <div>
       <!-- <p>{{ results }}</p> -->
       <div v-for="result in results">
-      <h2>Results:</h2>
+        <h2>Results:</h2>
         <div v-for="thing in result">
           <p>{{ thing.title }}</p>
           <img v-bind:src="thing.pic" />
@@ -29,6 +29,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div v-if="isError" style="color: red">
+        <h2>We're sorry but that show isn't available</h2>
       </div>
     </div>
   </div>
@@ -46,26 +49,30 @@ export default {
       results: [],
       text: "",
       id: "",
-      episode: []
+      episode: [],
+      isError: false
     };
   },
 
   created: function() {},
   methods: {
-    search: function() {
+    search: function(isError) {
       var params = {
         text: this.text
       };
       axios.post("http://localhost:3000/api/searches", params).then(
         function(response) {
-          // vince is a bo$$ and came up with this simple AF solution
+          // vince is a bo$$ and came up with this simple AF
           this.results = [];
           // this.episode = [];
-          if (response.data.results) {
-            (this.results.push(response.data.results));
-          } else {
-            console.log("show not available.");
-          };
+          this.results.push(response.data.results);
+          this.isError = false;
+          // console.log("LOOK HERE:");
+          // console.log(this.results[0].length);
+          if (this.results[0].length === 0) {
+            this.isError = true;
+            console.log("NO DICE");
+          }
         }.bind(this)
       );
       console.log("HI:");

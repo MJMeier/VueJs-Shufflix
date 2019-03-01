@@ -2,10 +2,10 @@
   <div class="home">
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">Welcome To Shufflix!</h1>
-        <p class="lead">Search for a show.</p>
+       <h1 class="display-4">Welcome To Shufflix!</h1>
+       <p class="lead">Please search for a show.</p>
         <div class="form-signin">
-          <input class="btn-block form-control" type="text" v-model="text" placeholder="Example: The Office" onfocus="this.placeholder=''">
+          <input type="text" v-model="text" placeholder="Example: The Office">
           <button v-on:click="search(isError)" class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
         </div>
       </div>
@@ -43,6 +43,9 @@
 </template>
 
 <style>
+.jumbotron {
+  background-color: #d9d9d9;
+}
 </style>
 
 <script>

@@ -7,11 +7,12 @@
 
     <div>
       <h2>Search for a show:</h2>
-      <p>Search: <input type="text" v-model="text"></p>
-      <button v-on:click="search(isError)" class="btn btn-primary">Search show</button>
+      <p>Search: <input type="text" v-model="text" /></p>
+      <button v-on:click="search(isError)" class="btn btn-primary">
+        Search show
+      </button>
     </div>
-    <div>
-      <!-- <p>{{ results }}</p> -->
+    <!-- <div>
       <div v-for="result in results">
         <h2>Results:</h2>
         <div v-for="thing in result" class="container">
@@ -35,11 +36,16 @@
       <div v-if="isError" style="color: red">
         <h2>We're sorry but that show isn't available</h2>
       </div>
+    </div> -->
+    <p>{{ words }}</p>
+    <div v-for="result in results">
+      <div v-html="result[0].content"></div>
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+</style>
 
 <script>
 var axios = require("axios");
@@ -50,7 +56,7 @@ export default {
       message: "Welcome to our app Shufflix!",
       results: [],
       text: "",
-      id: "",
+      ids: [],
       episode: [],
       isError: false
     };
@@ -78,7 +84,7 @@ export default {
         }.bind(this)
       );
       console.log("HI:");
-      // console.log(results);
+      console.log(this);
     },
 
     shuffleSeason: function(thing) {
@@ -103,6 +109,12 @@ export default {
       console.log(thing.visible);
     }
   },
-  computed: {}
+  computed: {
+    words: function() {
+      return "Hello!";
+    },
+
+    ids: function() {}
+  }
 };
 </script>

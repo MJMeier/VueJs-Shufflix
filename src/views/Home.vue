@@ -12,25 +12,20 @@
     </div>
 
     <div>
-      <!-- <p>{{ results }}</p> -->
       <div v-for="result in results">
         <h2>Results:</h2>
         <div v-for="thing in result" class="container" v-on:click="shuffleSeason(thing)">
-
           <div class="card-body">
-            <p class="card-header">{{ thing.title }}</p>
-            <img v-bind:src="thing.pic" class="card-body">
-          </div>
-
-          <div v-if="thing.visible">
-            <h3>You should watch episode:</h3>
-            <div v-for="sode in episode">
-              <div v-for="inner in sode">
-                <p>{{ inner }}</p>
+            <div v-html="thing.content">
+            </div>
+            <div v-if="thing.visible">
+              <h3>You should watch episode:</h3>
+              <div v-for="sode in episode">
+                <div v-for="inner in sode">
+                  <p>{{ inner }}</p>
+                </div>
               </div>
             </div>
-          </div>
-
         </div>
       </div>
 
@@ -56,8 +51,7 @@ export default {
     return {
       message: 'Welcome to our app Shufflix!',
       results: [],
-      text: '',
-      id: '',
+      text: "",
       episode: [],
       isError: false,
     };
@@ -84,8 +78,8 @@ export default {
           }
         }.bind(this)
       );
-      console.log('HI:');
-      // console.log(results);
+      console.log("HI:");
+      console.log(this);
     },
 
     shuffleSeason: function(thing) {
@@ -108,8 +102,8 @@ export default {
       thing.visible = !thing.visible;
       console.log('AFTER:');
       console.log(thing.visible);
-    },
-  },
-  computed: {},
+    }
+  }
+
 };
 </script>

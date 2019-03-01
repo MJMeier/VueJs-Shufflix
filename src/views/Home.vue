@@ -1,37 +1,27 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
-    <router-link to="/signup">Sign Up </router-link>
-    <router-link to="/login">Log In </router-link>
-    <router-link to="/logout">Log Out </router-link>
-
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-       <h1 class="display-4">Welcome To Shufflix!</h1>
-       <p class="lead">Please search for a show.</p>
+        <h1 class="display-4">Welcome To Shufflix!</h1>
+        <p class="lead">Search for a show.</p>
+        <div class="form-signin">
+          <input class="btn-block form-control" type="text" v-model="text" placeholder="Example: The Office" onfocus="this.placeholder=''">
+          <button v-on:click="search(isError)" class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
     </div>
-</div>
 
-
-
-
-    <div>
-      <h2>Search for a show:</h2>
-      <p>Search: <input type="text" v-model="text"></p>
-      <button v-on:click="search(isError)" class="btn btn-primary">Search show</button>
-    </div>
     <div>
       <!-- <p>{{ results }}</p> -->
       <div v-for="result in results">
         <h2>Results:</h2>
-        <div v-for="thing in result" class="container">
-          <p class="card-header">{{ thing.title }}</p>
+        <div v-for="thing in result" class="container" v-on:click="shuffleSeason(thing)">
+
           <div class="card-body">
+            <p class="card-header">{{ thing.title }}</p>
             <img v-bind:src="thing.pic" class="card-body">
-            <button v-model="id" v-on:click="shuffleSeason(thing)" class="btn btn-primary">
-              Shuffle Season
-            </button>
           </div>
+
           <div v-if="thing.visible">
             <h3>You should watch episode:</h3>
             <div v-for="sode in episode">
@@ -40,12 +30,15 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
+
       <div v-if="isError" style="color: red">
         <h2>We're sorry but that show isn't available</h2>
       </div>
     </div>
+
   </div>
 </template>
 

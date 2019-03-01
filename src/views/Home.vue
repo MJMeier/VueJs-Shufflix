@@ -1,25 +1,27 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <router-link to="/signup">Signup </router-link>
-    <router-link to="/login">Login </router-link>
-    <router-link to="/logout">Logout </router-link>
+    <router-link to="/signup">Sign Up </router-link>
+    <router-link to="/login">Log In </router-link>
+    <router-link to="/logout">Log Out </router-link>
 
     <div>
       <h2>Search for a show:</h2>
-      <p>Search: <input type="text" v-model="text" /></p>
-      <button v-on:click="search(isError)">Search show</button>
+      <p>Search: <input type="text" v-model="text"></p>
+      <button v-on:click="search(isError)" class="btn btn-primary">Search show</button>
     </div>
     <div>
       <!-- <p>{{ results }}</p> -->
       <div v-for="result in results">
         <h2>Results:</h2>
-        <div v-for="thing in result">
-          <p>{{ thing.title }}</p>
-          <img v-bind:src="thing.pic" />
-          <button v-model="id" v-on:click="shuffleSeason(thing)">
-            Shuffle season
-          </button>
+        <div v-for="thing in result" class="container">
+          <p class="card-header">{{ thing.title }}</p>
+          <div class="card-body">
+            <img v-bind:src="thing.pic" class="card-body">
+            <button v-model="id" v-on:click="shuffleSeason(thing)" class="btn btn-primary">
+              Shuffle Season
+            </button>
+          </div>
           <div v-if="thing.visible">
             <h3>You should watch episode:</h3>
             <div v-for="sode in episode">

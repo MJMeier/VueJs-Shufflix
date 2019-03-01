@@ -1,20 +1,19 @@
 <template>
   <div class="login">
     <div class="container">
-      <form v-on:submit.prevent="submit()">
-        <h1>Login</h1>
+      <form v-on:submit.prevent="submit()" class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
         <div class="form-group">
-          <label>Email:</label>
-          <input type="email" class="form-control" v-model="email">
+          <input type="email" class="form-control" v-model="email" placeholder="Email Address">
         </div>
         <div class="form-group">
-          <label>Password:</label>
-          <input type="password" class="form-control" v-model="password">
+          <input type="password" class="form-control" v-model="password" placeholder="Password">
         </div>
-        <input type="submit" class="btn btn-primary" value="Submit">
+        <input type="submit" class="btn btn-primary btn-block" value="Submit">
+        <p class="mt-5 mb-3 text-muted">©2019 SHUFFLIX</p>
       </form>
     </div>
   </div>

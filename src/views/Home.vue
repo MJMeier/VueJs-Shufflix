@@ -4,9 +4,9 @@
       <div class="container">
        <h1 class="display-4">Welcome To Shufflix!</h1>
        <p class="lead">Please search for a show.</p>
-        <div>
+        <div class="form-signin">
           <input type="text" v-model="text" placeholder="Example: The Office">
-          <button v-on:click="search(isError)" class="btn btn-primary">Search</button>
+          <button v-on:click="search(isError)" class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
         </div>
       </div>
     </div>
@@ -15,14 +15,13 @@
       <!-- <p>{{ results }}</p> -->
       <div v-for="result in results">
         <h2>Results:</h2>
-        <div v-for="thing in result" class="container">
-          <p class="card-header">{{ thing.title }}</p>
+        <div v-for="thing in result" class="container" v-on:click="shuffleSeason(thing)">
+
           <div class="card-body">
+            <p class="card-header">{{ thing.title }}</p>
             <img v-bind:src="thing.pic" class="card-body">
-            <button v-model="id" v-on:click="shuffleSeason(thing)" class="btn btn-primary">
-              Shuffle Season
-            </button>
           </div>
+
           <div v-if="thing.visible">
             <h3>You should watch episode:</h3>
             <div v-for="sode in episode">
@@ -31,12 +30,15 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
+
       <div v-if="isError" style="color: red">
         <h2>We're sorry but that show isn't available</h2>
       </div>
     </div>
+
   </div>
 </template>
 

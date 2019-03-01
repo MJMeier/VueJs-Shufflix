@@ -1,25 +1,16 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
-    <router-link to="/signup">Sign Up </router-link>
-    <router-link to="/login">Log In </router-link>
-    <router-link to="/logout">Log Out </router-link>
-
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
        <h1 class="display-4">Welcome To Shufflix!</h1>
        <p class="lead">Please search for a show.</p>
+        <div>
+          <input type="text" v-model="text" placeholder="Example: The Office">
+          <button v-on:click="search(isError)" class="btn btn-primary">Search</button>
+        </div>
+      </div>
     </div>
-</div>
 
-
-
-
-    <div>
-      <h2>Search for a show:</h2>
-      <p>Search: <input type="text" v-model="text"></p>
-      <button v-on:click="search(isError)" class="btn btn-primary">Search show</button>
-    </div>
     <div>
       <!-- <p>{{ results }}</p> -->
       <div v-for="result in results">
@@ -50,6 +41,9 @@
 </template>
 
 <style>
+.jumbotron {
+  background-color: #d9d9d9;
+}
 </style>
 
 <script>

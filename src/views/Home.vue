@@ -12,14 +12,17 @@
         Search show
       </button>
     </div>
-    <!-- <div>
+    <div>
       <div v-for="result in results">
         <h2>Results:</h2>
         <div v-for="thing in result" class="container">
-          <p class="card-header">{{ thing.title }}</p>
           <div class="card-body">
-            <img v-bind:src="thing.pic" class="card-body">
-            <button v-model="id" v-on:click="shuffleSeason(thing)" class="btn btn-primary">
+            <div v-html="thing.content"></div>
+            <button
+              v-model="thing.id"
+              v-on:click="shuffleSeason(thing)"
+              class="btn btn-primary"
+            >
               Shuffle Season
             </button>
           </div>
@@ -36,16 +39,11 @@
       <div v-if="isError" style="color: red">
         <h2>We're sorry but that show isn't available</h2>
       </div>
-    </div> -->
-    <p>{{ words }}</p>
-    <div v-for="result in results">
-      <div v-html="result[0].content"></div>
     </div>
   </div>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script>
 var axios = require("axios");
@@ -56,7 +54,6 @@ export default {
       message: "Welcome to our app Shufflix!",
       results: [],
       text: "",
-      ids: [],
       episode: [],
       isError: false
     };
@@ -108,13 +105,6 @@ export default {
       console.log("AFTER:");
       console.log(thing.visible);
     }
-  },
-  computed: {
-    words: function() {
-      return "Hello!";
-    },
-
-    ids: function() {}
   }
 };
 </script>

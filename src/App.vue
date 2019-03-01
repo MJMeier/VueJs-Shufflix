@@ -28,4 +28,16 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+.form-signin {
+  max-width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  display: block;
+  flex-direction: column;
+}
 </style>

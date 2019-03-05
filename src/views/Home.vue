@@ -5,13 +5,8 @@
         <h1 class="display-4">Welcome To Shufflix!</h1>
         <p class="lead">Please search for a show.</p>
         <div class="form-signin">
-          <input type="text" v-model="text" placeholder="Example: The Office" />
-          <button
-            v-on:click="search(isError)"
-            class="btn btn-primary btn-block"
-          >
-            <i class="fas fa-search"></i>
-          </button>
+          <input class="btn-block form-control" type="text" v-model="text" placeholder="Example: The Office" onfocus="this.placeholder=''">
+          <button v-on:click="search(isError)" class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
         </div>
       </div>
     </div>

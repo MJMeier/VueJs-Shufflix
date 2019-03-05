@@ -48,6 +48,16 @@
 .jumbotron {
   background-color: #d9d9d9;
 }
+
+.card-body {
+  text-align: justify;
+  border: solid black;
+}
+
+img {
+  float: left;
+  margin-right: 15px;
+}
 </style>
 
 <script>

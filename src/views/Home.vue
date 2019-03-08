@@ -5,8 +5,19 @@
         <h1 class="display-4">Welcome To Shufflix!</h1>
         <p class="lead">Please search for a show.</p>
         <div class="form-signin">
-          <input class="btn-block form-control" type="text" v-model="text" placeholder="Example: The Office" onfocus="this.placeholder=''">
-          <button v-on:click="search(isError)" class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
+          <input
+            class="btn-block form-control"
+            type="text"
+            v-model="text"
+            placeholder="Example: The Office"
+            onfocus="this.placeholder=''"
+          />
+          <button
+            v-on:click="search(isError)"
+            class="btn btn-primary btn-block"
+          >
+            <i class="fas fa-search"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -14,13 +25,12 @@
     <div>
       <div v-for="result in results">
         <h2>Results:</h2>
-        <div
-          v-for="thing in result"
-          class="container"
-          v-on:click="shuffleSeason(thing)"
-        >
+        <div v-for="thing in result" class="container">
           <div class="card-body">
             <div v-html="thing.content"></div>
+            <button v-model="id" v-on:click="shuffleSeason(thing)">
+              Shuffle Season
+            </button>
             <div v-if="thing.visible">
               <h3>You should watch episode:</h3>
               <div v-for="sode in episode">

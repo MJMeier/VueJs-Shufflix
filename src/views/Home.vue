@@ -30,7 +30,9 @@
             <div v-html="thing.content"></div>
             <button v-model="id" v-on:click="shuffleSeason(thing)">
               Shuffle Season
+              <i class="fas fa-random"></i>
             </button>
+
             <div v-if="thing.visible">
               <h3>You should watch episode:</h3>
               <div v-for="sode in episode">
@@ -56,12 +58,24 @@
 
 .card-body {
   text-align: justify;
-  border: solid black;
+  border: 0.5px solid gray;
+}
+
+.action.action-play {
+  color: red;
 }
 
 img {
   float: left;
   margin-right: 15px;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+.fas.fa-random {
+  height: 20px;
 }
 </style>
 

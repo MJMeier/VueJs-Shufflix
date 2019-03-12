@@ -53,7 +53,11 @@
 
 <style>
 .jumbotron {
-  background-color: #d9d9d9;
+  background-image: url(https://s3-eu-central-1.amazonaws.com/centaur-wp/employeebenefits/prod/content/uploads/2017/04/Film-equipment.jpg);
+  width: 1300px;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0.8;
 }
 
 .card-body {
@@ -70,6 +74,18 @@ img {
   margin-right: 15px;
 }
 
+.display-4 {
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.lead {
+  color: black;
+  background-color: white;
+  opacity: 0.8;
+}
+
 h3 {
   margin-top: 15px;
 }
@@ -80,16 +96,16 @@ h3 {
 </style>
 
 <script>
-var axios = require("axios");
+var axios = require('axios');
 
 export default {
   data: function() {
     return {
-      message: "Welcome to our app Shufflix!",
+      message: 'Welcome to our app Shufflix!',
       results: [],
-      text: "",
+      text: '',
       episode: [],
-      isError: false
+      isError: false,
     };
   },
 
@@ -97,9 +113,9 @@ export default {
   methods: {
     search: function(isError) {
       var params = {
-        text: this.text
+        text: this.text,
       };
-      axios.post("http://localhost:3000/api/searches", params).then(
+      axios.post('http://localhost:3000/api/searches', params).then(
         function(response) {
           // vince is a bo$$ and came up with this simple AF
           this.results = [];
@@ -110,22 +126,22 @@ export default {
           // console.log(this.results[0].length);
           if (this.results[0].length === 0) {
             this.isError = true;
-            console.log("NO DICE");
+            console.log('NO DICE');
           }
         }.bind(this)
       );
-      console.log("HI:");
+      console.log('HI:');
       console.log(this);
     },
 
     shuffleSeason: function(thing) {
-      var episode = "";
+      var episode = '';
       var params = {
-        id: thing.id
+        id: thing.id,
       };
-      console.log("ID HERE: ");
+      console.log('ID HERE: ');
       console.log(params);
-      axios.post("http://localhost:3000/api/episodes", params).then(
+      axios.post('http://localhost:3000/api/episodes', params).then(
         function(response) {
           this.episode = [];
           this.episode.push(response.data);
@@ -133,7 +149,7 @@ export default {
         console.log(this)
       );
       thing.visible = !thing.visible;
-    }
-  }
+    },
+  },
 };
 </script>
